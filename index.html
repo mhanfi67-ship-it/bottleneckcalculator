@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-theme="light" lang="en">
 <head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,11 +11,199 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Bottleneck Calculator — Redirecting</title>
-<meta content="noindex,follow" name="robots"/>
-<link href="https://bottleneckcalculator.cc/calculator.html" rel="canonical"/>
-<meta content="0;url=calculator.html" http-equiv="refresh"/>
-<script>window.location.replace("calculator.html");</script>
-</head>
-<body><p>Opening the <a href="calculator.html">Bottleneck Calculator</a>…</p></body>
+<title>Bottleneck Calculator — CPU &amp; GPU PC Performance Checker</title>
+<meta content="Free PC bottleneck calculator to compare CPU and GPU balance by resolution and workload. Check RAM, storage, temperature and PSU headroom with practical upgrade guidance." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://bottleneckcalculator.cc/" rel="canonical"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="Bottleneck Calculator — CPU &amp; GPU PC Performance Checker" property="og:title"/>
+<meta content="Check CPU and GPU balance, RAM, thermals and power headroom with a free browser-based PC calculator." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://bottleneckcalculator.cc/" property="og:url"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- Google AdSense: keep this script only if this publisher ID belongs to your approved AdSense account. -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509"></script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free browser-based PC bottleneck and system health calculator."}
+  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bottleneck Calculator", "url": "https://bottleneckcalculator.cc/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web Browser", "description": "A browser-based PC bottleneck calculator for CPU, GPU, RAM, thermals, storage and PSU planning.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav aria-label="Main navigation" class="nav-links" id="mainNav">
+<a class="active" href="index.html">Calculator</a>
+<a href="#method">Method</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="icon-button mobile-menu" id="menuButton">☰</button>
+<button aria-label="Switch theme" class="icon-button" id="themeButton">☾</button>
+</div>
+</header>
+<main>
+<section class="hero container">
+<div class="eyebrow">Free PC performance tool</div>
+<h1>Find what is <span>limiting your PC.</span></h1>
+<p class="hero-copy">Compare CPU and GPU capability for your workload, resolution and memory setup. Get a practical report without creating an account.</p>
+<div class="trust-row"><span>✓ No sign-up</span><span>✓ Runs in your browser</span><span>✓ Practical upgrade guidance</span></div>
+</section>
+<section aria-labelledby="calculator-title" class="container calculator-shell" id="calculator">
+<div class="calculator-head">
+<div><span class="section-kicker">PC Bottleneck Calculator</span><h2 id="calculator-title">Analyze your configuration</h2></div>
+<span class="status"><i></i> Ready</span>
+</div>
+<div class="calculator-grid">
+<form class="input-panel" id="calculatorForm">
+<div class="form-grid">
+<div class="field">
+<label for="cpu">Processor</label>
+<select id="cpu" required=""></select>
+</div>
+<div class="field">
+<label for="gpu">Graphics card</label>
+<select id="gpu" required=""></select>
+</div>
+<div class="field">
+<label for="resolution">Target resolution</label>
+<select id="resolution">
+<option value="1080">1080p / High FPS</option>
+<option selected="" value="1440">1440p / Balanced</option>
+<option value="2160">4K / Visual quality</option>
+</select>
+</div>
+<div class="field">
+<label for="workload">Primary workload</label>
+<select id="workload">
+<option value="gaming">Gaming</option>
+<option value="creative">Creative work</option>
+<option value="office">Office &amp; browsing</option>
+<option value="mixed">Mixed use</option>
+</select>
+</div>
+<div class="field">
+<label for="ram">Installed RAM</label>
+<select id="ram">
+<option value="8">8 GB</option>
+<option selected="" value="16">16 GB</option>
+<option value="32">32 GB</option>
+<option value="64">64 GB+</option>
+</select>
+</div>
+<div class="field">
+<label for="storage">System drive</label>
+<select id="storage">
+<option value="hdd">HDD</option>
+<option value="sata">SATA SSD</option>
+<option selected="" value="nvme">NVMe SSD</option>
+</select>
+</div>
+<div class="field full">
+<label for="temperature">Peak gaming/load temperature <output id="temperatureValue">72°C</output></label>
+<input id="temperature" max="100" min="45" type="range" value="72"/>
+</div>
+<div class="field full">
+<label for="psu">Power supply wattage <output id="psuValue">650 W</output></label>
+<input id="psu" max="1200" min="300" step="50" type="range" value="650"/>
+</div>
+</div>
+<button class="primary-button" type="submit">Analyze my PC <span>→</span></button>
+<p class="form-note">Results are estimates for planning. Exact game and application performance can vary.</p>
+</form>
+<div aria-live="polite" class="result-panel">
+<span class="section-kicker">Live report</span>
+<div class="score-row">
+<div class="score-ring" id="scoreRing" style="--score:86">
+<div><strong id="scoreValue">86</strong><small>/100</small></div>
+</div>
+<div>
+<h2 id="verdict">Healthy &amp; balanced</h2>
+<p id="verdictText">Your selected CPU and GPU are a sensible match for this target.</p>
+</div>
+</div>
+<div class="balance-card">
+<div class="card-heading"><span>Relative workload capacity</span><b id="limitLabel">Balanced pairing</b></div>
+<div class="balance-visual">
+<div class="tower-wrap"><strong id="cpuName">Ryzen 5 7600X</strong><div class="tower cpu-tower" id="cpuTower" style="--height:79%"><span id="cpuScore">79</span></div><small id="cpuIndex">CPU index 79</small></div>
+<div class="bridge">↔</div>
+<div class="tower-wrap right"><strong id="gpuName">RTX 4070</strong><div class="tower gpu-tower" id="gpuTower" style="--height:74%"><span id="gpuScore">74</span></div><small id="gpuIndex">GPU index 74</small></div>
+</div>
+<div class="facts">
+<div><small>Resolution</small><b id="factResolution">1440p</b></div>
+<div><small>Estimated load</small><b id="factPower">510 W</b></div>
+<div><small>Storage</small><b id="factStorage">NVMe SSD</b></div>
+</div>
+</div>
+<div class="meters">
+<div class="meter"><div><span>CPU ↔ GPU balance</span><b id="balanceText">88%</b></div><span class="meter-track"><i id="balanceBar" style="width:88%"></i></span></div>
+<div class="meter"><div><span>Memory headroom</span><b id="ramText">78%</b></div><span class="meter-track"><i id="ramBar" style="width:78%"></i></span></div>
+<div class="meter"><div><span>Thermal health</span><b id="thermalText">84%</b></div><span class="meter-track"><i id="thermalBar" style="width:84%"></i></span></div>
+<div class="meter"><div><span>Power headroom</span><b id="powerText">91%</b></div><span class="meter-track"><i id="powerBar" style="width:91%"></i></span></div>
+</div>
+<div class="advice" id="advice"><b>Next step:</b> No urgent core upgrade. Focus on maintenance, drivers and game settings.</div>
+</div>
+</div>
+</section>
+<section class="content-section container" id="features">
+<div class="section-heading">
+<div><span class="eyebrow">More than one number</span><h2>See the whole system.</h2></div>
+<p>A useful PC check considers the processor, graphics card and the supporting hardware around them.</p>
+</div>
+<div class="cards">
+<article class="card"><div class="card-icon">CPU</div><h3>CPU–GPU balance</h3><p>Estimate which side is more likely to limit your selected resolution and workload.</p></article>
+<article class="card"><div class="card-icon">RAM</div><h3>Memory headroom</h3><p>Check whether your installed RAM fits gaming, creative work or everyday use.</p></article>
+<article class="card"><div class="card-icon">°C</div><h3>Thermal health</h3><p>See how your peak temperature affects the overall health estimate.</p></article>
+<article class="card"><div class="card-icon">SSD</div><h3>Storage experience</h3><p>Understand where drive speed matters for loading, updates and responsiveness.</p></article>
+<article class="card"><div class="card-icon">PSU</div><h3>Power headroom</h3><p>Compare estimated platform demand with the selected PSU capacity.</p></article>
+<article class="card"><div class="card-icon">↑</div><h3>Upgrade guidance</h3><p>Turn several checks into a practical next step instead of chasing a single percentage.</p></article>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="container method-grid">
+<div><span class="eyebrow">Transparent methodology</span><h2>Understand the estimate.</h2><p>Our calculator uses relative component tiers and adjusts them for resolution and workload. Supporting hardware is scored separately so one strong component does not hide another limitation.</p></div>
+<div class="steps">
+<div class="step"><span>01</span><div><h3>Normalize capability</h3><p>CPU and GPU choices use relative performance and power values for comparison.</p></div></div>
+<div class="step"><span>02</span><div><h3>Adjust for workload</h3><p>Gaming, creative work and everyday use put different demands on hardware.</p></div></div>
+<div class="step"><span>03</span><div><h3>Check supporting parts</h3><p>RAM, storage, temperature and PSU capacity contribute to the health score.</p></div></div>
+<div class="step"><span>04</span><div><h3>Explain the result</h3><p>The report highlights the limiting scenario and suggests what to verify next.</p></div></div>
+</div>
+</div>
+</section>
+<section class="faq-section container">
+<div class="section-heading"><div><span class="eyebrow">PC guides</span><h2>Common questions.</h2></div></div>
+<details><summary>What is a PC bottleneck?</summary><p>A bottleneck is a component or condition that limits a particular workload before the rest of the system. The limiting component can change with resolution, settings, frame rate and application.</p></details>
+<details><summary>Is a small bottleneck bad?</summary><p>No. Every system has a limiting factor in a particular workload. A small imbalance only matters if it prevents you from reaching your intended experience.</p></details>
+<details><summary>Does resolution change a bottleneck?</summary><p>Yes. Higher resolutions generally increase GPU rendering work, while high-refresh 1080p gaming can put relatively more pressure on the CPU.</p></details>
+<details><summary>How can I verify the result?</summary><p>Monitor GPU utilization, CPU usage per core, clocks, memory use, temperatures and frame time while running the exact game or application you care about.</p></details>
+</section>
+
+<section class="content-section prose" id="how-it-works">
+<div class="container">
+<span class="eyebrow">How to use the calculator</span>
+<h2>Check your PC bottleneck before changing hardware</h2>
+<p>A PC bottleneck is not a permanent property of a computer. The component that limits performance can change with the game, application, resolution, graphics settings, frame-rate target and background workload. That is why a useful bottleneck check should be treated as a starting point rather than a single percentage that applies to every situation.</p>
+<p>Start by selecting the processor and graphics card that are installed in your system. Choose the resolution you actually play or work at, then select the workload that most closely matches your use. Add your RAM capacity, storage type, peak temperature and PSU wattage so the supporting-hardware checks have context.</p>
+<h3>How to verify a calculator result</h3>
+<p>After running the calculator, reproduce the workload on your real PC and monitor GPU utilization, CPU usage by core, clock speeds, RAM usage, temperatures and frame time. A GPU that remains close to full utilization during a graphics-heavy game can be behaving exactly as intended. Conversely, a low GPU utilization combined with one or more CPU cores near their limit can point toward a CPU-side limitation. Stutter can also come from RAM pressure, thermal throttling, storage activity, drivers or background software.</p>
+<h3>Why resolution matters</h3>
+<p>Resolution changes how much work the graphics card performs for every frame. At 1080p and very high refresh rates, a fast GPU may be able to render frames quickly enough that the CPU becomes the limiting factor. Moving to 1440p or 4K generally increases GPU workload and can change the balance. This is why a CPU and GPU pairing should always be evaluated in the context of the display and settings you intend to use.</p>
+<h3>Why the result is an estimate</h3>
+<p>This tool uses relative component values and workload adjustments rather than a database of measured FPS for every game. It cannot reproduce every driver version, game engine, BIOS setting, cooling condition or background process. Use the report to identify questions worth testing, then confirm important decisions with current reviews and real-world benchmarks.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for smarter builds and upgrades.</p></div>
+<div><h3>Tool</h3><a href="index.html">Calculator</a><a href="#method">Methodology</a><a href="blog.html">PC Guides</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div>
+<div class="container copyright">© <span id="year"></span> Bottleneck Calculator. All rights reserved.</div>
+</footer>
+<script defer="" src="app.js"></script>
+</body>
 </html>
