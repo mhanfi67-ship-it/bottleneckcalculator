@@ -1,30 +1,29 @@
-# Bottleneck Calculator Website (flat structure)
+# Bottleneck Calculator — GitHub Pages build
 
-All files sit directly at the repo root — no subfolders. This avoids
-GitHub's web-upload issue where dragging files from inside subfolders
-silently drops the folder structure.
+This package is a flat static website for GitHub Pages.
 
-To deploy: select ALL files in this folder and drag them together
-into GitHub's "Add file > Upload files" page in ONE batch, then commit.
-Do not upload the zip file itself — extract it first and upload its contents.
+## Main URLs
+- `/` redirects to `/calculator.html`
+- `/calculator.html` — main PC Bottleneck Calculator
+- `/blog.html` — PC performance guide library
+- `/about.html`
+- `/contact.html`
+- `/privacy.html`
+- `/terms.html`
 
-Main URLs:
-- /
-- /blog.html
-- /about.html
-- /contact.html
-- /privacy.html
-- /terms.html
+## Guides
+- `/blog-how-to-check-pc-bottleneck.html`
+- `/blog-cpu-vs-gpu-bottleneck.html`
+- `/blog-best-cpu-for-gaming-guide.html`
+- `/blog-gpu-bottleneck-guide.html`
+- `/blog-ram-and-pc-performance.html`
+- `/blog-pc-usage-guide.html`
 
-Blog URLs:
-- /blog-how-to-check-pc-bottleneck.html
-- /blog-cpu-vs-gpu-bottleneck.html
-- /blog-best-cpu-for-gaming-guide.html
-- /blog-gpu-bottleneck-guide.html
-- /blog-ram-and-pc-performance.html
+## Analytics
+The supplied Google tag `G-Z4WF04PCL5` is installed once in the `<head>` of every public page.
 
-Required files at root:
-style.css
-app.js
+## Deployment
+Extract the ZIP and upload all files at the repository root. Do not upload the ZIP itself.
 
-Keep the AdSense script only if the publisher ID belongs to the correct AdSense account.
+## Important AdSense note
+This build improves structure, original content, navigation, metadata, privacy disclosures and crawlability, but no website changes can guarantee AdSense approval. Keep content accurate and original, submit the correct live URL, and follow Google's current publisher policies and consent requirements.
