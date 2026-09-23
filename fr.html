@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="fr">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Bottleneck Calculator — Testeur de Goulot d'Étranglement CPU et GPU</title>
+<meta content="Calculateur gratuit de goulot d'étranglement PC pour comparer l'équilibre CPU et GPU selon la résolution et la charge de travail. Vérifiez la RAM, le stockage, la température et la marge d'alimentation avec des conseils pratiques." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://bottleneckcalculator.cc/fr.html" rel="canonical"/><link href="https://bottleneckcalculator.cc/" hreflang="en" rel="alternate"/><link href="https://bottleneckcalculator.cc/es.html" hreflang="es" rel="alternate"/><link href="https://bottleneckcalculator.cc/fr.html" hreflang="fr" rel="alternate"/><link href="https://bottleneckcalculator.cc/pt.html" hreflang="pt" rel="alternate"/><link href="https://bottleneckcalculator.cc/zh.html" hreflang="zh" rel="alternate"/><link href="https://bottleneckcalculator.cc/" hreflang="x-default" rel="alternate"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="Bottleneck Calculator — Testeur de Goulot d'Étranglement CPU et GPU" property="og:title"/>
+<meta content="Vérifiez l'équilibre CPU/GPU, la RAM, la température et la marge d'alimentation avec un calculateur PC gratuit dans le navigateur." property="og:description"/>
+<meta content="website" property="og:type"/><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/>
+<meta content="https://bottleneckcalculator.cc/fr.html" property="og:url"/>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json">
+<link href="style.css" rel="stylesheet"/>
+<!-- Google AdSense: keep this script only if this publisher ID belongs to your approved AdSense account. -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509"></script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/fr.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Un calculateur gratuit dans le navigateur pour le goulot d'étranglement et la santé du système de votre PC."}
+  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bottleneck Calculator", "url": "https://bottleneckcalculator.cc/fr.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web Browser", "description": "Un calculateur de goulot d'étranglement PC dans le navigateur pour planifier le CPU, le GPU, la RAM, la température, le stockage et l'alimentation.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav aria-label="Main navigation" class="nav-links" id="mainNav">
+<a class="active" href="index.html">Calculateur</a>
+<a href="#method">Méthode</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">À propos</a>
+<a href="contact.html">Contact</a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="icon-button mobile-menu" id="menuButton">☰</button>
+<div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><a href="es.html">ES</a><a class="active" href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button aria-label="Switch theme" class="icon-button" id="themeButton">☾</button>
+</div>
+</header>
+<main>
+<section class="hero container">
+<div class="eyebrow">Outil gratuit de performance PC</div>
+<h1>Découvrez ce qui <span>limite votre PC.</span></h1>
+<p class="hero-copy">Comparez les capacités de votre CPU et GPU selon votre charge de travail, résolution et mémoire. Obtenez un rapport pratique sans créer de compte.</p>
+<div class="trust-row"><span>✓ Sans inscription</span><span>✓ Fonctionne dans le navigateur</span><span>✓ Conseils pratiques</span></div>
+</section>
+<section aria-labelledby="calculator-title" class="container calculator-shell" id="calculator">
+<div class="calculator-head">
+<div><span class="section-kicker">Calculateur de Goulot d'Étranglement</span><h2 id="calculator-title">Analysez votre configuration</h2></div>
+<span class="status"><i></i> Prêt</span>
+</div>
+<div class="calculator-grid">
+<form class="input-panel" id="calculatorForm">
+<div class="form-grid">
+<div class="field">
+<label for="cpu">Processeur</label>
+<select id="cpu" required=""></select>
+</div>
+<div class="field">
+<label for="gpu">Carte graphique</label>
+<select id="gpu" required=""></select>
+</div>
+<div class="field">
+<label for="resolution">Résolution cible</label>
+<select id="resolution">
+<option value="1080">1080p / FPS élevé</option>
+<option selected="" value="1440">1440p / Équilibré</option>
+<option value="2160">4K / Qualité visuelle</option>
+</select>
+</div>
+<div class="field">
+<label for="workload">Charge de travail principale</label>
+<select id="workload">
+<option value="gaming">Jeux vidéo</option>
+<option value="creative">Travail créatif</option>
+<option value="office">Bureautique et navigation</option>
+<option value="mixed">Usage mixte</option>
+</select>
+</div>
+<div class="field">
+<label for="ram">RAM installée</label>
+<select id="ram">
+<option value="8">8 GB</option>
+<option selected="" value="16">16 GB</option>
+<option value="32">32 GB</option>
+<option value="64">64 GB+</option>
+</select>
+</div>
+<div class="field">
+<label for="storage">Disque système</label>
+<select id="storage">
+<option value="hdd">HDD</option>
+<option value="sata">SATA SSD</option>
+<option selected="" value="nvme">NVMe SSD</option>
+</select>
+</div>
+<div class="field full">
+<label for="temperature">Température maximale en jeu/charge <output id="temperatureValue">72°C</output></label>
+<input id="temperature" max="100" min="45" type="range" value="72"/>
+</div>
+<div class="field full">
+<label for="psu">Puissance de l'alimentation <output id="psuValue">650 W</output></label>
+<input id="psu" max="1200" min="300" step="50" type="range" value="650"/>
+</div>
+</div>
+<button class="primary-button" type="submit">Analyser mon PC <span>→</span></button>
+<p class="form-note">Les résultats sont des estimations à titre indicatif. Les performances réelles en jeu ou en application peuvent varier.</p>
+</form>
+<div aria-live="polite" class="result-panel">
+<span class="section-kicker">Rapport en direct</span>
+<div class="score-row">
+<div class="score-ring" id="scoreRing" style="--score:86">
+<div><strong id="scoreValue">86</strong><small>/100</small></div>
+</div>
+<div>
+<h2 id="verdict">Sain et équilibré</h2>
+<p id="verdictText">Le CPU et le GPU sélectionnés forment une association cohérente pour cet objectif.</p>
+</div>
+</div>
+<div class="balance-card">
+<div class="card-heading"><span>Capacité relative de charge de travail</span><b id="limitLabel">Association équilibrée</b></div>
+<div class="balance-visual">
+<div class="tower-wrap"><strong id="cpuName">Ryzen 5 7600X</strong><div class="tower cpu-tower" id="cpuTower" style="--height:79%"><span id="cpuScore">79</span></div><small id="cpuIndex">Indice CPU 79</small></div>
+<div class="bridge">↔</div>
+<div class="tower-wrap right"><strong id="gpuName">RTX 4070</strong><div class="tower gpu-tower" id="gpuTower" style="--height:74%"><span id="gpuScore">74</span></div><small id="gpuIndex">Indice GPU 74</small></div>
+</div>
+<div class="facts">
+<div><small>Résolution</small><b id="factResolution">1440p</b></div>
+<div><small>Charge estimée</small><b id="factPower">510 W</b></div>
+<div><small>Stockage</small><b id="factStorage">NVMe SSD</b></div>
+</div>
+</div>
+<div class="meters">
+<div class="meter"><div><span>Équilibre CPU ↔ GPU</span><b id="balanceText">88%</b></div><span class="meter-track"><i id="balanceBar" style="width:88%"></i></span></div>
+<div class="meter"><div><span>Marge mémoire</span><b id="ramText">78%</b></div><span class="meter-track"><i id="ramBar" style="width:78%"></i></span></div>
+<div class="meter"><div><span>Santé thermique</span><b id="thermalText">84%</b></div><span class="meter-track"><i id="thermalBar" style="width:84%"></i></span></div>
+<div class="meter"><div><span>Marge d'alimentation</span><b id="powerText">91%</b></div><span class="meter-track"><i id="powerBar" style="width:91%"></i></span></div>
+</div>
+<div class="advice" id="advice"><b>Prochaine étape :</b> Aucune mise à niveau majeure urgente. Concentrez-vous sur l'entretien, les pilotes et les réglages du jeu.</div>
+</div>
+</div>
+</section>
+<div class="container"><figure class="article-figure"><img src="bottleneck-calculator-example-result.webp" alt="Exemple de rapport du calculateur de goulot d'étranglement avec détails du CPU, GPU, RAM, stockage, alimentation et refroidissement, accompagné d'un résumé des performances" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Un rapport complet examine l'équilibre CPU/GPU ainsi que la RAM, le stockage, la température et la marge d'alimentation, pas seulement un pourcentage.</figcaption></figure></div>
+<section class="content-section container" id="features">
+<div class="section-heading">
+<div><span class="eyebrow">Plus qu'un chiffre</span><h2>Analysez tout le système.</h2></div>
+<p>Un diagnostic PC utile prend en compte le processeur, la carte graphique et le matériel de soutien qui les entoure.</p>
+</div>
+<div class="cards">
+<article class="card"><div class="card-icon">CPU</div><h3>Équilibre CPU–GPU</h3><p>Estime le composant le plus susceptible de limiter la résolution et la charge de travail sélectionnées.</p></article>
+<article class="card"><div class="card-icon">RAM</div><h3>Marge mémoire</h3><p>Vérifiez si votre RAM installée convient au jeu, au travail créatif ou à un usage quotidien.</p></article>
+<article class="card"><div class="card-icon">°C</div><h3>Santé thermique</h3><p>Découvrez comment votre température maximale affecte l'estimation globale de santé.</p></article>
+<article class="card"><div class="card-icon">SSD</div><h3>Expérience de stockage</h3><p>Comprenez où la vitesse du disque compte pour le chargement, les mises à jour et la réactivité.</p></article>
+<article class="card"><div class="card-icon">PSU</div><h3>Marge d'alimentation</h3><p>Comparez la demande estimée de la plateforme avec la capacité de l'alimentation sélectionnée.</p></article>
+<article class="card"><div class="card-icon">↑</div><h3>Conseils de mise à niveau</h3><p>Transformez plusieurs vérifications en une prochaine étape concrète, plutôt que de viser un simple pourcentage.</p></article>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="container method-grid">
+<div><span class="eyebrow">Méthodologie transparente</span><h2>Comprenez l'estimation.</h2><p>Notre calculateur utilise des niveaux relatifs de composants et les ajuste selon la résolution et la charge de travail. Le matériel de soutien est noté séparément afin qu'un composant puissant ne masque pas une autre limitation.</p></div>
+<div class="steps">
+<div class="step"><span>01</span><div><h3>Normaliser la capacité</h3><p>Les choix de CPU et GPU utilisent des valeurs relatives de performance et de puissance pour la comparaison.</p></div></div>
+<div class="step"><span>02</span><div><h3>Ajuster selon la charge</h3><p>Les jeux, le travail créatif et l'usage quotidien sollicitent le matériel différemment.</p></div></div>
+<div class="step"><span>03</span><div><h3>Vérifier les composants de soutien</h3><p>La RAM, le stockage, la température et la capacité de l'alimentation contribuent au score de santé.</p></div></div>
+<div class="step"><span>04</span><div><h3>Expliquer le résultat</h3><p>Le rapport met en évidence le scénario limitant et suggère quoi vérifier ensuite.</p></div></div>
+</div>
+</div>
+</section>
+<section class="faq-section container">
+<div class="section-heading"><div><span class="eyebrow">Guides PC</span><h2>Questions fréquentes.</h2></div></div>
+<details><summary>Qu'est-ce qu'un goulot d'étranglement PC ?</summary><p>Un goulot d'étranglement est un composant ou une condition qui limite une charge de travail donnée avant le reste du système. Le composant limitant peut changer selon la résolution, les réglages, le taux d'images et l'application.</p></details>
+<details><summary>Un petit goulot d'étranglement est-il grave ?</summary><p>Non. Chaque système a un facteur limitant dans une charge de travail donnée. Un léger déséquilibre n'a d'importance que s'il vous empêche d'atteindre l'expérience visée.</p></details>
+<details><summary>La résolution change-t-elle le goulot d'étranglement ?</summary><p>Oui. Les résolutions plus élevées augmentent généralement le travail de rendu du GPU, tandis que le jeu en 1080p à taux de rafraîchissement élevé peut solliciter davantage le CPU.</p></details>
+<details><summary>Comment puis-je vérifier le résultat ?</summary><p>Surveillez l'utilisation du GPU, l'utilisation du CPU par cœur, les fréquences, l'utilisation de la mémoire, les températures et le temps de trame en exécutant le jeu ou l'application qui vous intéresse réellement.</p></details>
+</section>
+
+<section class="content-section prose" id="how-it-works">
+<div class="container">
+<span class="eyebrow">Comment utiliser le calculateur</span>
+<h2>Vérifiez le goulot d'étranglement de votre PC avant de changer de matériel</h2>
+<p>Un goulot d'étranglement PC n'est pas une propriété permanente d'un ordinateur. Le composant qui limite les performances peut changer selon le jeu, l'application, la résolution, les réglages graphiques, l'objectif de fréquence d'images et la charge en arrière-plan. C'est pourquoi une vérification utile doit être considérée comme un point de départ plutôt qu'un pourcentage unique valable pour toutes les situations.</p><figure class="article-figure"><img src="how-to-use-bottleneck-calculator-steps.webp" alt="Cinq étapes pour utiliser le calculateur de goulot d'étranglement : sélectionnez votre CPU, sélectionnez votre GPU, choisissez les autres composants, cliquez sur calculer et obtenez vos résultats" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Sélectionner un CPU et un GPU, ajouter le reste de votre configuration et lancer la vérification prend moins d'une minute.</figcaption></figure>
+<p>Commencez par sélectionner le processeur et la carte graphique installés dans votre système. Choisissez la résolution à laquelle vous jouez ou travaillez réellement, puis sélectionnez la charge de travail qui correspond le mieux à votre usage. Ajoutez votre capacité de RAM, le type de stockage, la température maximale et la puissance de l'alimentation afin de donner du contexte aux vérifications du matériel de soutien.</p>
+<h3>Comment vérifier un résultat du calculateur</h3>
+<p>Après avoir utilisé le calculateur, reproduisez la charge de travail sur votre PC réel et surveillez l'utilisation du GPU, l'utilisation du CPU par cœur, les fréquences, l'utilisation de la RAM, les températures et le temps de trame. Un GPU qui reste proche de 100 % d'utilisation lors d'un jeu exigeant graphiquement peut se comporter exactement comme prévu. À l'inverse, une faible utilisation du GPU combinée à un ou plusieurs cœurs CPU proches de leur limite peut indiquer une limitation côté CPU. Les saccades peuvent aussi provenir d'une pression sur la RAM, d'un throttling thermique, d'une activité de stockage, des pilotes ou de logiciels en arrière-plan.</p>
+<h3>Pourquoi la résolution compte</h3>
+<p>La résolution change la quantité de travail effectuée par la carte graphique pour chaque image. En 1080p et à des taux de rafraîchissement très élevés, un GPU rapide peut rendre les images assez vite pour que le CPU devienne le facteur limitant. Passer en 1440p ou 4K augmente généralement la charge du GPU et peut modifier l'équilibre. C'est pourquoi une association CPU/GPU doit toujours être évaluée dans le contexte de l'écran et des réglages que vous comptez utiliser.</p>
+<h3>Pourquoi le résultat est une estimation</h3>
+<p>Cet outil utilise des valeurs relatives de composants et des ajustements de charge de travail plutôt qu'une base de données de FPS mesurés pour chaque jeu. Il ne peut pas reproduire chaque version de pilote, moteur de jeu, réglage BIOS, condition de refroidissement ou processus en arrière-plan. Utilisez le rapport pour identifier ce qui mérite d'être testé, puis confirmez les décisions importantes avec des tests actuels et des benchmarks réels.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Des conseils pratiques sur les goulots d'étranglement et la santé du système pour des configurations et mises à niveau plus intelligentes.</p></div>
+<div><h3>Outil</h3><a href="index.html">Calculateur</a><a href="#method">Méthodologie</a><a href="blog.html">Guides PC</a></div>
+<div><h3>Société</h3><a href="about.html">À propos</a><a href="contact.html">Contact</a></div>
+<div><h3>Légal</h3><a href="privacy.html">Politique de confidentialité</a><a href="terms.html">Conditions d'utilisation</a></div>
+</div>
+<div class="container copyright">© <span id="year"></span> Bottleneck Calculator. Tous droits réservés.</div>
+</footer>
+<script defer="" src="app.js"></script>
+</body>
+</html>

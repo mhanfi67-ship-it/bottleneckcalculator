@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="pt">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Bottleneck Calculator — Verificador de Gargalo de CPU e GPU</title>
+<meta content="Calculadora gratuita de gargalo de PC para comparar o equilíbrio entre CPU e GPU conforme a resolução e a carga de trabalho. Verifique RAM, armazenamento, temperatura e margem da fonte com orientação prática de upgrade." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://bottleneckcalculator.cc/pt.html" rel="canonical"/><link href="https://bottleneckcalculator.cc/" hreflang="en" rel="alternate"/><link href="https://bottleneckcalculator.cc/es.html" hreflang="es" rel="alternate"/><link href="https://bottleneckcalculator.cc/fr.html" hreflang="fr" rel="alternate"/><link href="https://bottleneckcalculator.cc/pt.html" hreflang="pt" rel="alternate"/><link href="https://bottleneckcalculator.cc/zh.html" hreflang="zh" rel="alternate"/><link href="https://bottleneckcalculator.cc/" hreflang="x-default" rel="alternate"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="Bottleneck Calculator — Verificador de Gargalo de CPU e GPU" property="og:title"/>
+<meta content="Verifique o equilíbrio entre CPU e GPU, RAM, temperatura e margem de energia com uma calculadora de PC gratuita no navegador." property="og:description"/>
+<meta content="website" property="og:type"/><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/>
+<meta content="https://bottleneckcalculator.cc/pt.html" property="og:url"/>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json">
+<link href="style.css" rel="stylesheet"/>
+<!-- Google AdSense: keep this script only if this publisher ID belongs to your approved AdSense account. -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509"></script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/pt.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Uma calculadora gratuita no navegador para gargalo e saúde do sistema do seu PC."}
+  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bottleneck Calculator", "url": "https://bottleneckcalculator.cc/pt.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web Browser", "description": "Uma calculadora de gargalo de PC no navegador para planejar CPU, GPU, RAM, temperatura, armazenamento e fonte.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav aria-label="Main navigation" class="nav-links" id="mainNav">
+<a class="active" href="index.html">Calculadora</a>
+<a href="#method">Método</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">Sobre</a>
+<a href="contact.html">Contato</a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="icon-button mobile-menu" id="menuButton">☰</button>
+<div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a class="active" href="pt.html">PT</a><a href="zh.html">ZH</a></div><button aria-label="Switch theme" class="icon-button" id="themeButton">☾</button>
+</div>
+</header>
+<main>
+<section class="hero container">
+<div class="eyebrow">Ferramenta gratuita de desempenho de PC</div>
+<h1>Descubra o que está <span>limitando seu PC.</span></h1>
+<p class="hero-copy">Compare a capacidade da sua CPU e GPU de acordo com sua carga de trabalho, resolução e memória. Obtenha um relatório prático sem criar uma conta.</p>
+<div class="trust-row"><span>✓ Sem cadastro</span><span>✓ Funciona no navegador</span><span>✓ Orientação prática</span></div>
+</section>
+<section aria-labelledby="calculator-title" class="container calculator-shell" id="calculator">
+<div class="calculator-head">
+<div><span class="section-kicker">Calculadora de Gargalo</span><h2 id="calculator-title">Analise sua configuração</h2></div>
+<span class="status"><i></i> Pronto</span>
+</div>
+<div class="calculator-grid">
+<form class="input-panel" id="calculatorForm">
+<div class="form-grid">
+<div class="field">
+<label for="cpu">Processador</label>
+<select id="cpu" required=""></select>
+</div>
+<div class="field">
+<label for="gpu">Placa de vídeo</label>
+<select id="gpu" required=""></select>
+</div>
+<div class="field">
+<label for="resolution">Resolução alvo</label>
+<select id="resolution">
+<option value="1080">1080p / FPS alto</option>
+<option selected="" value="1440">1440p / Equilibrado</option>
+<option value="2160">4K / Qualidade visual</option>
+</select>
+</div>
+<div class="field">
+<label for="workload">Carga de trabalho principal</label>
+<select id="workload">
+<option value="gaming">Jogos</option>
+<option value="creative">Trabalho criativo</option>
+<option value="office">Escritório e navegação</option>
+<option value="mixed">Uso misto</option>
+</select>
+</div>
+<div class="field">
+<label for="ram">RAM instalada</label>
+<select id="ram">
+<option value="8">8 GB</option>
+<option selected="" value="16">16 GB</option>
+<option value="32">32 GB</option>
+<option value="64">64 GB+</option>
+</select>
+</div>
+<div class="field">
+<label for="storage">Unidade do sistema</label>
+<select id="storage">
+<option value="hdd">HDD</option>
+<option value="sata">SATA SSD</option>
+<option selected="" value="nvme">NVMe SSD</option>
+</select>
+</div>
+<div class="field full">
+<label for="temperature">Temperatura máxima em jogo/carga <output id="temperatureValue">72°C</output></label>
+<input id="temperature" max="100" min="45" type="range" value="72"/>
+</div>
+<div class="field full">
+<label for="psu">Potência da fonte <output id="psuValue">650 W</output></label>
+<input id="psu" max="1200" min="300" step="50" type="range" value="650"/>
+</div>
+</div>
+<button class="primary-button" type="submit">Analisar meu PC <span>→</span></button>
+<p class="form-note">Os resultados são estimativas para planejamento. O desempenho exato em jogos e aplicativos pode variar.</p>
+</form>
+<div aria-live="polite" class="result-panel">
+<span class="section-kicker">Relatório em tempo real</span>
+<div class="score-row">
+<div class="score-ring" id="scoreRing" style="--score:86">
+<div><strong id="scoreValue">86</strong><small>/100</small></div>
+</div>
+<div>
+<h2 id="verdict">Saudável e equilibrado</h2>
+<p id="verdictText">A CPU e a GPU selecionadas formam uma combinação adequada para este objetivo.</p>
+</div>
+</div>
+<div class="balance-card">
+<div class="card-heading"><span>Capacidade relativa de carga de trabalho</span><b id="limitLabel">Combinação equilibrada</b></div>
+<div class="balance-visual">
+<div class="tower-wrap"><strong id="cpuName">Ryzen 5 7600X</strong><div class="tower cpu-tower" id="cpuTower" style="--height:79%"><span id="cpuScore">79</span></div><small id="cpuIndex">Índice de CPU 79</small></div>
+<div class="bridge">↔</div>
+<div class="tower-wrap right"><strong id="gpuName">RTX 4070</strong><div class="tower gpu-tower" id="gpuTower" style="--height:74%"><span id="gpuScore">74</span></div><small id="gpuIndex">Índice de GPU 74</small></div>
+</div>
+<div class="facts">
+<div><small>Resolução</small><b id="factResolution">1440p</b></div>
+<div><small>Carga estimada</small><b id="factPower">510 W</b></div>
+<div><small>Armazenamento</small><b id="factStorage">NVMe SSD</b></div>
+</div>
+</div>
+<div class="meters">
+<div class="meter"><div><span>Equilíbrio CPU ↔ GPU</span><b id="balanceText">88%</b></div><span class="meter-track"><i id="balanceBar" style="width:88%"></i></span></div>
+<div class="meter"><div><span>Margem de memória</span><b id="ramText">78%</b></div><span class="meter-track"><i id="ramBar" style="width:78%"></i></span></div>
+<div class="meter"><div><span>Saúde térmica</span><b id="thermalText">84%</b></div><span class="meter-track"><i id="thermalBar" style="width:84%"></i></span></div>
+<div class="meter"><div><span>Margem de energia</span><b id="powerText">91%</b></div><span class="meter-track"><i id="powerBar" style="width:91%"></i></span></div>
+</div>
+<div class="advice" id="advice"><b>Próximo passo:</b> Nenhum upgrade urgente de componentes principais. Foque em manutenção, drivers e configurações do jogo.</div>
+</div>
+</div>
+</section>
+<div class="container"><figure class="article-figure"><img src="bottleneck-calculator-example-result.webp" alt="Exemplo de relatório da calculadora de gargalo mostrando detalhes de CPU, GPU, RAM, armazenamento, fonte e refrigeração com um resumo de desempenho" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Um relatório completo analisa o equilíbrio entre CPU e GPU junto com RAM, armazenamento, temperatura e margem de energia, não apenas uma porcentagem.</figcaption></figure></div>
+<section class="content-section container" id="features">
+<div class="section-heading">
+<div><span class="eyebrow">Mais que um número</span><h2>Veja o sistema completo.</h2></div>
+<p>Uma verificação útil do PC considera o processador, a placa de vídeo e o hardware de suporte ao redor deles.</p>
+</div>
+<div class="cards">
+<article class="card"><div class="card-icon">CPU</div><h3>Equilíbrio CPU–GPU</h3><p>Estima qual lado é mais provável de limitar a resolução e a carga de trabalho selecionadas.</p></article>
+<article class="card"><div class="card-icon">RAM</div><h3>Margem de memória</h3><p>Verifique se a sua RAM instalada é adequada para jogos, trabalho criativo ou uso diário.</p></article>
+<article class="card"><div class="card-icon">°C</div><h3>Saúde térmica</h3><p>Veja como sua temperatura máxima afeta a estimativa geral de saúde.</p></article>
+<article class="card"><div class="card-icon">SSD</div><h3>Experiência de armazenamento</h3><p>Entenda onde a velocidade do disco importa para carregamento, atualizações e capacidade de resposta.</p></article>
+<article class="card"><div class="card-icon">PSU</div><h3>Margem de energia</h3><p>Compare a demanda estimada da plataforma com a capacidade da fonte selecionada.</p></article>
+<article class="card"><div class="card-icon">↑</div><h3>Orientação de upgrade</h3><p>Transforme várias verificações em um próximo passo prático, em vez de buscar apenas uma porcentagem.</p></article>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="container method-grid">
+<div><span class="eyebrow">Metodologia transparente</span><h2>Entenda a estimativa.</h2><p>Nossa calculadora usa níveis relativos de componentes e os ajusta conforme a resolução e a carga de trabalho. O hardware de suporte é pontuado separadamente para que um componente forte não esconda outra limitação.</p></div>
+<div class="steps">
+<div class="step"><span>01</span><div><h3>Normalizar capacidade</h3><p>As opções de CPU e GPU usam valores relativos de desempenho e potência para comparação.</p></div></div>
+<div class="step"><span>02</span><div><h3>Ajustar pela carga de trabalho</h3><p>Jogos, trabalho criativo e uso diário exigem coisas diferentes do hardware.</p></div></div>
+<div class="step"><span>03</span><div><h3>Verificar componentes de suporte</h3><p>RAM, armazenamento, temperatura e capacidade da fonte contribuem para a pontuação de saúde.</p></div></div>
+<div class="step"><span>04</span><div><h3>Explicar o resultado</h3><p>O relatório destaca o cenário limitante e sugere o que verificar em seguida.</p></div></div>
+</div>
+</div>
+</section>
+<section class="faq-section container">
+<div class="section-heading"><div><span class="eyebrow">Guias de PC</span><h2>Perguntas frequentes.</h2></div></div>
+<details><summary>O que é um gargalo de PC?</summary><p>Um gargalo é um componente ou condição que limita uma determinada carga de trabalho antes do restante do sistema. O componente limitante pode mudar conforme a resolução, as configurações, a taxa de quadros e o aplicativo.</p></details>
+<details><summary>Um gargalo pequeno é ruim?</summary><p>Não. Todo sistema tem um fator limitante em determinada carga de trabalho. Um pequeno desequilíbrio só importa se impedir que você alcance a experiência desejada.</p></details>
+<details><summary>A resolução muda o gargalo?</summary><p>Sim. Resoluções mais altas geralmente aumentam o trabalho de renderização da GPU, enquanto jogos em 1080p com alta taxa de atualização podem exigir relativamente mais da CPU.</p></details>
+<details><summary>Como posso verificar o resultado?</summary><p>Monitore o uso da GPU, o uso da CPU por núcleo, os clocks, o uso de memória, as temperaturas e o tempo de quadro enquanto executa o jogo ou aplicativo que realmente importa para você.</p></details>
+</section>
+
+<section class="content-section prose" id="how-it-works">
+<div class="container">
+<span class="eyebrow">Como usar a calculadora</span>
+<h2>Verifique o gargalo do seu PC antes de trocar hardware</h2>
+<p>Um gargalo de PC não é uma propriedade permanente de um computador. O componente que limita o desempenho pode mudar conforme o jogo, o aplicativo, a resolução, as configurações gráficas, a meta de taxa de quadros e a carga em segundo plano. Por isso, uma verificação útil de gargalo deve ser tratada como um ponto de partida, e não como uma única porcentagem válida para toda situação.</p><figure class="article-figure"><img src="how-to-use-bottleneck-calculator-steps.webp" alt="Cinco passos para usar a calculadora de gargalo: selecione sua CPU, selecione sua GPU, escolha outros componentes, clique em calcular e obtenha seus resultados" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Selecionar uma CPU e GPU, adicionar o restante da sua configuração e executar a verificação leva menos de um minuto.</figcaption></figure>
+<p>Comece selecionando o processador e a placa de vídeo instalados no seu sistema. Escolha a resolução em que você realmente joga ou trabalha e depois selecione a carga de trabalho mais próxima do seu uso. Adicione a capacidade de RAM, o tipo de armazenamento, a temperatura máxima e a potência da fonte para dar contexto às verificações de hardware de suporte.</p>
+<h3>Como verificar um resultado da calculadora</h3>
+<p>Depois de rodar a calculadora, reproduza a carga de trabalho no seu PC real e monitore o uso da GPU, o uso da CPU por núcleo, os clocks, o uso de RAM, as temperaturas e o tempo de quadro. Uma GPU que permanece próxima de 100% de uso durante um jogo pesado graficamente pode estar se comportando exatamente como esperado. Por outro lado, um uso baixo da GPU combinado com um ou mais núcleos de CPU perto do limite pode indicar uma limitação do lado da CPU. Engasgos também podem vir de pressão de RAM, throttling térmico, atividade de armazenamento, drivers ou software em segundo plano.</p>
+<h3>Por que a resolução importa</h3>
+<p>A resolução muda quanto trabalho a placa de vídeo realiza a cada quadro. Em 1080p e taxas de atualização muito altas, uma GPU rápida pode renderizar quadros rápido o suficiente para que a CPU se torne o fator limitante. Mudar para 1440p ou 4K geralmente aumenta a carga da GPU e pode alterar o equilíbrio. Por isso, uma combinação de CPU e GPU sempre deve ser avaliada no contexto da tela e das configurações que você pretende usar.</p>
+<h3>Por que o resultado é uma estimativa</h3>
+<p>Esta ferramenta usa valores relativos de componentes e ajustes de carga de trabalho, em vez de um banco de dados de FPS medidos para cada jogo. Ela não consegue reproduzir cada versão de driver, motor de jogo, configuração de BIOS, condição de resfriamento ou processo em segundo plano. Use o relatório para identificar o que vale a pena testar e confirme decisões importantes com análises atuais e benchmarks reais.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Orientação prática sobre gargalos e saúde do sistema para builds e upgrades mais inteligentes.</p></div>
+<div><h3>Ferramenta</h3><a href="index.html">Calculadora</a><a href="#method">Metodologia</a><a href="blog.html">Guias de PC</a></div>
+<div><h3>Empresa</h3><a href="about.html">Sobre</a><a href="contact.html">Contato</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Política de Privacidade</a><a href="terms.html">Termos de Uso</a></div>
+</div>
+<div class="container copyright">© <span id="year"></span> Bottleneck Calculator. Todos os direitos reservados.</div>
+</footer>
+<script defer="" src="app.js"></script>
+</body>
+</html>

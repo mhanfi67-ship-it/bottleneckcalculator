@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="es">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Bottleneck Calculator — Comprobador de Cuello de Botella CPU y GPU</title>
+<meta content="Calculadora gratuita de cuello de botella de PC para comparar el equilibrio entre CPU y GPU según resolución y carga de trabajo. Revisa RAM, almacenamiento, temperatura y margen de fuente de poder con recomendaciones prácticas." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://bottleneckcalculator.cc/es.html" rel="canonical"/><link href="https://bottleneckcalculator.cc/" hreflang="en" rel="alternate"/><link href="https://bottleneckcalculator.cc/es.html" hreflang="es" rel="alternate"/><link href="https://bottleneckcalculator.cc/fr.html" hreflang="fr" rel="alternate"/><link href="https://bottleneckcalculator.cc/pt.html" hreflang="pt" rel="alternate"/><link href="https://bottleneckcalculator.cc/zh.html" hreflang="zh" rel="alternate"/><link href="https://bottleneckcalculator.cc/" hreflang="x-default" rel="alternate"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="Bottleneck Calculator — Comprobador de Cuello de Botella CPU y GPU" property="og:title"/>
+<meta content="Revisa el equilibrio entre CPU y GPU, la RAM, la temperatura y el margen de energía con una calculadora de PC gratuita en el navegador." property="og:description"/>
+<meta content="website" property="og:type"/><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/>
+<meta content="https://bottleneckcalculator.cc/es.html" property="og:url"/>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json">
+<link href="style.css" rel="stylesheet"/>
+<!-- Google AdSense: keep this script only if this publisher ID belongs to your approved AdSense account. -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509"></script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/es.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Una calculadora gratuita en el navegador para el cuello de botella y la salud del sistema de tu PC."}
+  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bottleneck Calculator", "url": "https://bottleneckcalculator.cc/es.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web Browser", "description": "Una calculadora de cuello de botella para PC en el navegador para planificar CPU, GPU, RAM, temperatura, almacenamiento y fuente de poder.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav aria-label="Main navigation" class="nav-links" id="mainNav">
+<a class="active" href="index.html">Calculadora</a>
+<a href="#method">Método</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">Acerca de</a>
+<a href="contact.html">Contacto</a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="icon-button mobile-menu" id="menuButton">☰</button>
+<div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><a class="active" href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button aria-label="Switch theme" class="icon-button" id="themeButton">☾</button>
+</div>
+</header>
+<main>
+<section class="hero container">
+<div class="eyebrow">Herramienta gratuita de rendimiento de PC</div>
+<h1>Descubre qué está <span>limitando tu PC.</span></h1>
+<p class="hero-copy">Compara la capacidad de tu CPU y GPU según tu carga de trabajo, resolución y memoria. Obtén un informe práctico sin crear una cuenta.</p>
+<div class="trust-row"><span>✓ Sin registro</span><span>✓ Funciona en tu navegador</span><span>✓ Recomendaciones prácticas</span></div>
+</section>
+<section aria-labelledby="calculator-title" class="container calculator-shell" id="calculator">
+<div class="calculator-head">
+<div><span class="section-kicker">Calculadora de Cuello de Botella</span><h2 id="calculator-title">Analiza tu configuración</h2></div>
+<span class="status"><i></i> Listo</span>
+</div>
+<div class="calculator-grid">
+<form class="input-panel" id="calculatorForm">
+<div class="form-grid">
+<div class="field">
+<label for="cpu">Procesador</label>
+<select id="cpu" required=""></select>
+</div>
+<div class="field">
+<label for="gpu">Tarjeta gráfica</label>
+<select id="gpu" required=""></select>
+</div>
+<div class="field">
+<label for="resolution">Resolución objetivo</label>
+<select id="resolution">
+<option value="1080">1080p / FPS alto</option>
+<option selected="" value="1440">1440p / Equilibrado</option>
+<option value="2160">4K / Calidad visual</option>
+</select>
+</div>
+<div class="field">
+<label for="workload">Carga de trabajo principal</label>
+<select id="workload">
+<option value="gaming">Videojuegos</option>
+<option value="creative">Trabajo creativo</option>
+<option value="office">Ofimática y navegación</option>
+<option value="mixed">Uso mixto</option>
+</select>
+</div>
+<div class="field">
+<label for="ram">RAM instalada</label>
+<select id="ram">
+<option value="8">8 GB</option>
+<option selected="" value="16">16 GB</option>
+<option value="32">32 GB</option>
+<option value="64">64 GB+</option>
+</select>
+</div>
+<div class="field">
+<label for="storage">Unidad del sistema</label>
+<select id="storage">
+<option value="hdd">HDD</option>
+<option value="sata">SATA SSD</option>
+<option selected="" value="nvme">NVMe SSD</option>
+</select>
+</div>
+<div class="field full">
+<label for="temperature">Temperatura máxima en juego/carga <output id="temperatureValue">72°C</output></label>
+<input id="temperature" max="100" min="45" type="range" value="72"/>
+</div>
+<div class="field full">
+<label for="psu">Potencia de la fuente <output id="psuValue">650 W</output></label>
+<input id="psu" max="1200" min="300" step="50" type="range" value="650"/>
+</div>
+</div>
+<button class="primary-button" type="submit">Analizar mi PC <span>→</span></button>
+<p class="form-note">Los resultados son estimaciones para planificar. El rendimiento exacto en juegos y aplicaciones puede variar.</p>
+</form>
+<div aria-live="polite" class="result-panel">
+<span class="section-kicker">Informe en vivo</span>
+<div class="score-row">
+<div class="score-ring" id="scoreRing" style="--score:86">
+<div><strong id="scoreValue">86</strong><small>/100</small></div>
+</div>
+<div>
+<h2 id="verdict">Saludable y equilibrado</h2>
+<p id="verdictText">La CPU y la GPU seleccionadas forman una combinación adecuada para este objetivo.</p>
+</div>
+</div>
+<div class="balance-card">
+<div class="card-heading"><span>Capacidad relativa de carga de trabajo</span><b id="limitLabel">Combinación equilibrada</b></div>
+<div class="balance-visual">
+<div class="tower-wrap"><strong id="cpuName">Ryzen 5 7600X</strong><div class="tower cpu-tower" id="cpuTower" style="--height:79%"><span id="cpuScore">79</span></div><small id="cpuIndex">Índice de CPU 79</small></div>
+<div class="bridge">↔</div>
+<div class="tower-wrap right"><strong id="gpuName">RTX 4070</strong><div class="tower gpu-tower" id="gpuTower" style="--height:74%"><span id="gpuScore">74</span></div><small id="gpuIndex">Índice de GPU 74</small></div>
+</div>
+<div class="facts">
+<div><small>Resolución</small><b id="factResolution">1440p</b></div>
+<div><small>Carga estimada</small><b id="factPower">510 W</b></div>
+<div><small>Almacenamiento</small><b id="factStorage">NVMe SSD</b></div>
+</div>
+</div>
+<div class="meters">
+<div class="meter"><div><span>Equilibrio CPU ↔ GPU</span><b id="balanceText">88%</b></div><span class="meter-track"><i id="balanceBar" style="width:88%"></i></span></div>
+<div class="meter"><div><span>Margen de memoria</span><b id="ramText">78%</b></div><span class="meter-track"><i id="ramBar" style="width:78%"></i></span></div>
+<div class="meter"><div><span>Salud térmica</span><b id="thermalText">84%</b></div><span class="meter-track"><i id="thermalBar" style="width:84%"></i></span></div>
+<div class="meter"><div><span>Margen de energía</span><b id="powerText">91%</b></div><span class="meter-track"><i id="powerBar" style="width:91%"></i></span></div>
+</div>
+<div class="advice" id="advice"><b>Siguiente paso:</b> No es urgente actualizar componentes principales. Enfócate en mantenimiento, controladores y ajustes del juego.</div>
+</div>
+</div>
+</section>
+<div class="container"><figure class="article-figure"><img src="bottleneck-calculator-example-result.webp" alt="Ejemplo de informe de la calculadora de cuello de botella con detalles de CPU, GPU, RAM, almacenamiento, fuente y refrigeración junto con un resumen de rendimiento" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Un informe completo analiza el equilibrio entre CPU y GPU junto con la RAM, el almacenamiento, la temperatura y el margen de energía, no solo un porcentaje.</figcaption></figure></div>
+<section class="content-section container" id="features">
+<div class="section-heading">
+<div><span class="eyebrow">Más que un número</span><h2>Analiza todo el sistema.</h2></div>
+<p>Una revisión útil de la PC considera el procesador, la tarjeta gráfica y el hardware de soporte a su alrededor.</p>
+</div>
+<div class="cards">
+<article class="card"><div class="card-icon">CPU</div><h3>Equilibrio CPU–GPU</h3><p>Estima qué lado es más probable que limite la resolución y carga de trabajo seleccionadas.</p></article>
+<article class="card"><div class="card-icon">RAM</div><h3>Margen de memoria</h3><p>Comprueba si tu RAM instalada es suficiente para juegos, trabajo creativo o uso diario.</p></article>
+<article class="card"><div class="card-icon">°C</div><h3>Salud térmica</h3><p>Descubre cómo afecta tu temperatura máxima a la estimación general de salud.</p></article>
+<article class="card"><div class="card-icon">SSD</div><h3>Experiencia de almacenamiento</h3><p>Entiende dónde importa la velocidad del disco para cargas, actualizaciones y capacidad de respuesta.</p></article>
+<article class="card"><div class="card-icon">PSU</div><h3>Margen de energía</h3><p>Compara la demanda estimada de la plataforma con la capacidad de la fuente seleccionada.</p></article>
+<article class="card"><div class="card-icon">↑</div><h3>Guía de actualización</h3><p>Convierte varias revisiones en un siguiente paso práctico, en lugar de perseguir un solo porcentaje.</p></article>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="container method-grid">
+<div><span class="eyebrow">Metodología transparente</span><h2>Entiende la estimación.</h2><p>Nuestra calculadora usa niveles relativos de componentes y los ajusta según la resolución y la carga de trabajo. El hardware de soporte se puntúa por separado para que un componente fuerte no oculte otra limitación.</p></div>
+<div class="steps">
+<div class="step"><span>01</span><div><h3>Normalizar capacidad</h3><p>Las opciones de CPU y GPU usan valores relativos de rendimiento y potencia para comparar.</p></div></div>
+<div class="step"><span>02</span><div><h3>Ajustar según la carga</h3><p>Los videojuegos, el trabajo creativo y el uso diario exigen cosas distintas del hardware.</p></div></div>
+<div class="step"><span>03</span><div><h3>Revisar componentes de soporte</h3><p>La RAM, el almacenamiento, la temperatura y la capacidad de la fuente contribuyen a la puntuación de salud.</p></div></div>
+<div class="step"><span>04</span><div><h3>Explicar el resultado</h3><p>El informe destaca el escenario limitante y sugiere qué comprobar a continuación.</p></div></div>
+</div>
+</div>
+</section>
+<section class="faq-section container">
+<div class="section-heading"><div><span class="eyebrow">Guías de PC</span><h2>Preguntas frecuentes.</h2></div></div>
+<details><summary>¿Qué es un cuello de botella de PC?</summary><p>Un cuello de botella es un componente o condición que limita una carga de trabajo concreta antes que el resto del sistema. El componente limitante puede cambiar según la resolución, los ajustes, la tasa de fotogramas y la aplicación.</p></details>
+<details><summary>¿Es malo un cuello de botella pequeño?</summary><p>No. Todo sistema tiene un factor limitante en una carga de trabajo concreta. Un pequeño desequilibrio solo importa si te impide lograr la experiencia que buscas.</p></details>
+<details><summary>¿La resolución cambia el cuello de botella?</summary><p>Sí. Las resoluciones más altas suelen aumentar el trabajo de renderizado de la GPU, mientras que los juegos a 1080p con alta tasa de refresco pueden exigir relativamente más a la CPU.</p></details>
+<details><summary>¿Cómo puedo verificar el resultado?</summary><p>Monitorea el uso de la GPU, el uso de la CPU por núcleo, las frecuencias, el uso de memoria, las temperaturas y el tiempo de fotograma mientras ejecutas el juego o la aplicación que te interesa.</p></details>
+</section>
+
+<section class="content-section prose" id="how-it-works">
+<div class="container">
+<span class="eyebrow">Cómo usar la calculadora</span>
+<h2>Comprueba el cuello de botella de tu PC antes de cambiar hardware</h2>
+<p>Un cuello de botella de PC no es una propiedad permanente de un equipo. El componente que limita el rendimiento puede cambiar según el juego, la aplicación, la resolución, los ajustes gráficos, el objetivo de tasa de fotogramas y la carga en segundo plano. Por eso, una comprobación útil de cuello de botella debe tratarse como un punto de partida y no como un único porcentaje válido para toda situación.</p><figure class="article-figure"><img src="how-to-use-bottleneck-calculator-steps.webp" alt="Cinco pasos para usar la calculadora de cuello de botella: selecciona tu CPU, selecciona tu GPU, elige otros componentes, haz clic en calcular y obtén tus resultados" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>Seleccionar una CPU y GPU, añadir el resto de tu configuración y ejecutar la comprobación toma menos de un minuto.</figcaption></figure>
+<p>Comienza seleccionando el procesador y la tarjeta gráfica instalados en tu sistema. Elige la resolución a la que realmente juegas o trabajas y luego selecciona la carga de trabajo que más se ajuste a tu uso. Añade tu capacidad de RAM, el tipo de almacenamiento, la temperatura máxima y la potencia de la fuente para dar contexto a las comprobaciones del hardware de soporte.</p>
+<h3>Cómo verificar el resultado de la calculadora</h3>
+<p>Después de ejecutar la calculadora, reproduce la carga de trabajo en tu PC real y monitorea el uso de la GPU, el uso de la CPU por núcleo, las frecuencias, el uso de RAM, las temperaturas y el tiempo de fotograma. Una GPU que se mantiene cerca del 100% de uso durante un juego exigente gráficamente puede estar comportándose exactamente como se espera. Por el contrario, un uso bajo de la GPU combinado con uno o más núcleos de la CPU cerca de su límite puede indicar una limitación por parte de la CPU. Los tirones también pueden deberse a presión de RAM, throttling térmico, actividad de almacenamiento, controladores o software en segundo plano.</p>
+<h3>Por qué importa la resolución</h3>
+<p>La resolución cambia cuánto trabajo realiza la tarjeta gráfica en cada fotograma. A 1080p y tasas de refresco muy altas, una GPU rápida puede renderizar fotogramas con la suficiente rapidez como para que la CPU se convierta en el factor limitante. Pasar a 1440p o 4K generalmente aumenta la carga de la GPU y puede cambiar el equilibrio. Por eso una combinación de CPU y GPU siempre debe evaluarse en el contexto de la pantalla y los ajustes que planeas usar.</p>
+<h3>Por qué el resultado es una estimación</h3>
+<p>Esta herramienta usa valores relativos de componentes y ajustes de carga de trabajo, en lugar de una base de datos de FPS medidos para cada juego. No puede reproducir cada versión de controlador, motor de juego, configuración de BIOS, condición de refrigeración o proceso en segundo plano. Usa el informe para identificar qué vale la pena comprobar y confirma las decisiones importantes con reseñas actuales y pruebas de rendimiento reales.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Guía práctica sobre cuellos de botella y salud del sistema para builds y actualizaciones más inteligentes.</p></div>
+<div><h3>Herramienta</h3><a href="index.html">Calculadora</a><a href="#method">Metodología</a><a href="blog.html">Guías de PC</a></div>
+<div><h3>Empresa</h3><a href="about.html">Acerca de</a><a href="contact.html">Contacto</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Política de privacidad</a><a href="terms.html">Términos de uso</a></div>
+</div>
+<div class="container copyright">© <span id="year"></span> Bottleneck Calculator. Todos los derechos reservados.</div>
+</footer>
+<script defer="" src="app.js"></script>
+</body>
+</html>

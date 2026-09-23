@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="zh">
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Bottleneck Calculator — CPU 与 GPU 瓶颈检测工具</title>
+<meta content="免费的 PC 瓶颈计算器，可根据分辨率和工作负载比较 CPU 与 GPU 的均衡程度，并检查内存、存储、温度与电源余量，提供实用的升级建议。" name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://bottleneckcalculator.cc/zh.html" rel="canonical"/><link href="https://bottleneckcalculator.cc/" hreflang="en" rel="alternate"/><link href="https://bottleneckcalculator.cc/es.html" hreflang="es" rel="alternate"/><link href="https://bottleneckcalculator.cc/fr.html" hreflang="fr" rel="alternate"/><link href="https://bottleneckcalculator.cc/pt.html" hreflang="pt" rel="alternate"/><link href="https://bottleneckcalculator.cc/zh.html" hreflang="zh" rel="alternate"/><link href="https://bottleneckcalculator.cc/" hreflang="x-default" rel="alternate"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="Bottleneck Calculator — CPU 与 GPU 瓶颈检测工具" property="og:title"/>
+<meta content="通过免费的浏览器端 PC 计算器检查 CPU 与 GPU 均衡、内存、散热与电源余量。" property="og:description"/>
+<meta content="website" property="og:type"/><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/>
+<meta content="https://bottleneckcalculator.cc/zh.html" property="og:url"/>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json">
+<link href="style.css" rel="stylesheet"/>
+<!-- Google AdSense: keep this script only if this publisher ID belongs to your approved AdSense account. -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509"></script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/zh.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"一款免费的浏览器端 PC 瓶颈与系统健康计算器。"}
+  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bottleneck Calculator", "url": "https://bottleneckcalculator.cc/zh.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web Browser", "description": "一款浏览器端 PC 瓶颈计算器，用于规划 CPU、GPU、内存、散热、存储与电源。", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav aria-label="Main navigation" class="nav-links" id="mainNav">
+<a class="active" href="index.html">计算器</a>
+<a href="#method">方法</a>
+<a href="blog.html">博客</a>
+<a href="about.html">关于我们</a>
+<a href="contact.html">联系我们</a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="icon-button mobile-menu" id="menuButton">☰</button>
+<div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a class="active" href="zh.html">ZH</a></div><button aria-label="Switch theme" class="icon-button" id="themeButton">☾</button>
+</div>
+</header>
+<main>
+<section class="hero container">
+<div class="eyebrow">免费 PC 性能工具</div>
+<h1>找出 <span>限制你 PC 性能的瓶颈。</span></h1>
+<p class="hero-copy">根据你的工作负载、分辨率和内存配置比较 CPU 与 GPU 性能，无需注册即可获得实用报告。</p>
+<div class="trust-row"><span>✓ 无需注册</span><span>✓ 浏览器内运行</span><span>✓ 实用升级建议</span></div>
+</section>
+<section aria-labelledby="calculator-title" class="container calculator-shell" id="calculator">
+<div class="calculator-head">
+<div><span class="section-kicker">PC 瓶颈计算器</span><h2 id="calculator-title">分析你的配置</h2></div>
+<span class="status"><i></i> 准备就绪</span>
+</div>
+<div class="calculator-grid">
+<form class="input-panel" id="calculatorForm">
+<div class="form-grid">
+<div class="field">
+<label for="cpu">处理器</label>
+<select id="cpu" required=""></select>
+</div>
+<div class="field">
+<label for="gpu">显卡</label>
+<select id="gpu" required=""></select>
+</div>
+<div class="field">
+<label for="resolution">目标分辨率</label>
+<select id="resolution">
+<option value="1080">1080p / 高帧率</option>
+<option selected="" value="1440">1440p / 均衡</option>
+<option value="2160">4K / 画质优先</option>
+</select>
+</div>
+<div class="field">
+<label for="workload">主要用途</label>
+<select id="workload">
+<option value="gaming">游戏</option>
+<option value="creative">创意工作</option>
+<option value="office">办公与网页浏览</option>
+<option value="mixed">混合使用</option>
+</select>
+</div>
+<div class="field">
+<label for="ram">已安装内存</label>
+<select id="ram">
+<option value="8">8 GB</option>
+<option selected="" value="16">16 GB</option>
+<option value="32">32 GB</option>
+<option value="64">64 GB+</option>
+</select>
+</div>
+<div class="field">
+<label for="storage">系统盘</label>
+<select id="storage">
+<option value="hdd">HDD</option>
+<option value="sata">SATA SSD</option>
+<option selected="" value="nvme">NVMe SSD</option>
+</select>
+</div>
+<div class="field full">
+<label for="temperature">游戏/负载峰值温度 <output id="temperatureValue">72°C</output></label>
+<input id="temperature" max="100" min="45" type="range" value="72"/>
+</div>
+<div class="field full">
+<label for="psu">电源功率 <output id="psuValue">650 W</output></label>
+<input id="psu" max="1200" min="300" step="50" type="range" value="650"/>
+</div>
+</div>
+<button class="primary-button" type="submit">分析我的 PC <span>→</span></button>
+<p class="form-note">结果仅为规划参考，实际游戏与应用表现可能有所不同。</p>
+</form>
+<div aria-live="polite" class="result-panel">
+<span class="section-kicker">实时报告</span>
+<div class="score-row">
+<div class="score-ring" id="scoreRing" style="--score:86">
+<div><strong id="scoreValue">86</strong><small>/100</small></div>
+</div>
+<div>
+<h2 id="verdict">健康且均衡</h2>
+<p id="verdictText">你所选的 CPU 与 GPU 对该目标而言是合理的搭配。</p>
+</div>
+</div>
+<div class="balance-card">
+<div class="card-heading"><span>相对工作负载能力</span><b id="limitLabel">均衡搭配</b></div>
+<div class="balance-visual">
+<div class="tower-wrap"><strong id="cpuName">Ryzen 5 7600X</strong><div class="tower cpu-tower" id="cpuTower" style="--height:79%"><span id="cpuScore">79</span></div><small id="cpuIndex">CPU 指数 79</small></div>
+<div class="bridge">↔</div>
+<div class="tower-wrap right"><strong id="gpuName">RTX 4070</strong><div class="tower gpu-tower" id="gpuTower" style="--height:74%"><span id="gpuScore">74</span></div><small id="gpuIndex">GPU 指数 74</small></div>
+</div>
+<div class="facts">
+<div><small>分辨率</small><b id="factResolution">1440p</b></div>
+<div><small>预估负载</small><b id="factPower">510 W</b></div>
+<div><small>存储</small><b id="factStorage">NVMe SSD</b></div>
+</div>
+</div>
+<div class="meters">
+<div class="meter"><div><span>CPU ↔ GPU 均衡</span><b id="balanceText">88%</b></div><span class="meter-track"><i id="balanceBar" style="width:88%"></i></span></div>
+<div class="meter"><div><span>内存余量</span><b id="ramText">78%</b></div><span class="meter-track"><i id="ramBar" style="width:78%"></i></span></div>
+<div class="meter"><div><span>散热状况</span><b id="thermalText">84%</b></div><span class="meter-track"><i id="thermalBar" style="width:84%"></i></span></div>
+<div class="meter"><div><span>电源余量</span><b id="powerText">91%</b></div><span class="meter-track"><i id="powerBar" style="width:91%"></i></span></div>
+</div>
+<div class="advice" id="advice"><b>下一步：</b>核心部件无需紧急升级，重点关注日常维护、驱动程序与游戏设置。</div>
+</div>
+</div>
+</section>
+<div class="container"><figure class="article-figure"><img src="bottleneck-calculator-example-result.webp" alt="PC 瓶颈计算器示例报告，展示 CPU、GPU、内存、存储、电源与散热详情及性能摘要" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>完整报告不仅看一个百分比，还综合考量 CPU 与 GPU 均衡、内存、存储、散热与电源余量。</figcaption></figure></div>
+<section class="content-section container" id="features">
+<div class="section-heading">
+<div><span class="eyebrow">不止一个数字</span><h2>纵览整个系统。</h2></div>
+<p>一次有用的 PC 检测需要综合考虑处理器、显卡及其周边支持硬件。</p>
+</div>
+<div class="cards">
+<article class="card"><div class="card-icon">CPU</div><h3>CPU–GPU 均衡</h3><p>估算在所选分辨率与负载下，哪一方更可能成为限制因素。</p></article>
+<article class="card"><div class="card-icon">RAM</div><h3>内存余量</h3><p>检查已安装内存是否满足游戏、创意工作或日常使用需求。</p></article>
+<article class="card"><div class="card-icon">°C</div><h3>散热状况</h3><p>了解峰值温度如何影响整体健康评分。</p></article>
+<article class="card"><div class="card-icon">SSD</div><h3>存储体验</h3><p>了解硬盘速度在加载、更新与系统响应方面的重要性。</p></article>
+<article class="card"><div class="card-icon">PSU</div><h3>电源余量</h3><p>将预估整机功耗与所选电源容量进行比较。</p></article>
+<article class="card"><div class="card-icon">↑</div><h3>升级建议</h3><p>把多项检测结果转化为切实可行的下一步，而不是只盯着一个百分比。</p></article>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="container method-grid">
+<div><span class="eyebrow">透明的评估方法</span><h2>了解评估原理。</h2><p>我们的计算器使用相对的组件等级，并根据分辨率与工作负载进行调整。支持性硬件单独评分，避免某个强力部件掩盖其他限制因素。</p></div>
+<div class="steps">
+<div class="step"><span>01</span><div><h3>能力标准化</h3><p>CPU 与 GPU 选项使用相对性能与功耗数值进行比较。</p></div></div>
+<div class="step"><span>02</span><div><h3>按工作负载调整</h3><p>游戏、创意工作与日常使用对硬件的要求各不相同。</p></div></div>
+<div class="step"><span>03</span><div><h3>检查支持性部件</h3><p>内存、存储、温度与电源容量共同构成健康评分。</p></div></div>
+<div class="step"><span>04</span><div><h3>解读结果</h3><p>报告会指出限制场景，并建议接下来要核实的内容。</p></div></div>
+</div>
+</div>
+</section>
+<section class="faq-section container">
+<div class="section-heading"><div><span class="eyebrow">PC 指南</span><h2>常见问题。</h2></div></div>
+<details><summary>什么是 PC 瓶颈？</summary><p>瓶颈是指在特定工作负载下，先于系统其他部分成为限制因素的组件或状况。限制组件会随分辨率、设置、帧率和应用程序而变化。</p></details>
+<details><summary>轻微瓶颈是坏事吗？</summary><p>不是。每个系统在特定负载下都存在限制因素。只有当轻微失衡妨碍你达到预期体验时，它才真正重要。</p></details>
+<details><summary>分辨率会改变瓶颈吗？</summary><p>会。更高分辨率通常会增加 GPU 的渲染负担，而高刷新率的 1080p 游戏则会给 CPU 带来相对更大的压力。</p></details>
+<details><summary>我该如何验证结果？</summary><p>在运行你真正关心的游戏或应用程序时，监控 GPU 利用率、各核心 CPU 使用率、频率、内存占用、温度与帧时间。</p></details>
+</section>
+
+<section class="content-section prose" id="how-it-works">
+<div class="container">
+<span class="eyebrow">如何使用本计算器</span>
+<h2>更换硬件前先检查你的 PC 瓶颈</h2>
+<p>PC 瓶颈并非一台电脑固定不变的属性。限制性能的组件会随游戏、应用程序、分辨率、画质设置、目标帧率与后台负载而变化。因此，一次有用的瓶颈检测应被视为分析的起点，而不是适用于所有情况的单一百分比。</p><figure class="article-figure"><img src="how-to-use-bottleneck-calculator-steps.webp" alt="使用瓶颈计算器的五个步骤：选择 CPU、选择 GPU、选择其他组件、点击计算并查看结果" loading="lazy" decoding="async" width="1600" height="900"/><figcaption>选择 CPU 和 GPU、补充其余配置并运行检测，全程不到一分钟。</figcaption></figure>
+<p>首先选择你系统中安装的处理器和显卡，选择你实际使用的分辨率，再选择最符合你用途的工作负载类型。补充内存容量、存储类型、峰值温度与电源功率，为支持性硬件的检测提供背景信息。</p>
+<h3>如何验证计算器的结果</h3>
+<p>运行计算器后，请在你的真实电脑上重现该工作负载，并监控 GPU 利用率、各核心 CPU 使用率、频率、内存占用、温度与帧时间。在高负载游戏中，GPU 利用率长期接近满载，说明系统表现符合预期；反之，若 GPU 利用率偏低，而一个或多个 CPU 核心接近极限，则可能指向 CPU 端的限制。卡顿也可能源于内存压力、温度降频、存储活动、驱动程序或后台软件。</p>
+<h3>为什么分辨率很重要</h3>
+<p>分辨率决定了显卡在每一帧上要承担多少工作量。在 1080p 且刷新率很高的情况下，速度快的 GPU 可能足以快速渲染帧画面，从而使 CPU 成为限制因素。切换到 1440p 或 4K 通常会增加 GPU 负载，并改变这种平衡。因此，评估 CPU 与 GPU 的搭配时，必须结合你实际使用的显示器与设置来综合考虑。</p>
+<h3>为什么结果只是估算</h3>
+<p>本工具使用的是组件相对数值与工作负载调整，而非针对每款游戏实测 FPS 的数据库，无法还原每一种驱动版本、游戏引擎、BIOS 设置、散热条件或后台进程。请把报告当作发现问题、值得进一步测试的起点，重要决策还应结合最新评测与真实基准测试来确认。</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>提供实用的 PC 瓶颈与系统健康指导，助你打造更明智的配置与升级方案。</p></div>
+<div><h3>工具</h3><a href="index.html">计算器</a><a href="#method">评估方法</a><a href="blog.html">PC 指南</a></div>
+<div><h3>公司</h3><a href="about.html">关于我们</a><a href="contact.html">联系我们</a></div>
+<div><h3>法律</h3><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></div>
+</div>
+<div class="container copyright">© <span id="year"></span> Bottleneck Calculator. 保留所有权利。</div>
+</footer>
+<script defer="" src="app.js"></script>
+</body>
+</html>
