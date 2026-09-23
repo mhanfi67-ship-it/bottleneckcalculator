@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bottleneckcalculator.cc/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bottleneckcalculator.cc/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
+  </url>
   <url><loc>https://bottleneckcalculator.cc/blog.html</loc></url>
   <url><loc>https://bottleneckcalculator.cc/about.html</loc></url>
   <url><loc>https://bottleneckcalculator.cc/contact.html</loc></url>
