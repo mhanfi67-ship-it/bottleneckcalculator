@@ -1,47 +1,44 @@
-# Bottleneck Calculator (bottleneckcalculator.cc)
+# Bottleneck Calculator Website — flat structure, no subfolders
 
-Static site hosted on GitHub Pages with the custom domain in `CNAME`.
+Every single file lives at the repo root. There are NO subfolders anywhere
+(not even for images or other languages) specifically to avoid GitHub's
+web-upload tool silently dropping folder structure or overwriting
+same-named files (this has happened twice already with this project).
 
-## Folder structure
+## Deploying an update (IMPORTANT — do this every time)
 
-```
-/
-├── index.html              English homepage (calculator)
-├── about.html  contact.html  privacy.html  terms.html
-├── 404.html                Not-found page, also forwards old URLs to new ones
-├── blog/
-│   ├── index.html          Guides hub  (/blog/)
-│   └── *.html              Individual guides (/blog/<slug>.html)
-├── es/  fr/  pt/  zh/      Translated homepages (/es/, /fr/, /pt/, /zh/)
-├── assets/
-│   ├── css/style.css
-│   ├── js/app.js
-│   ├── images/             Article images (.webp) and og-image.png
-│   └── icons/              apple-touch-icon + PWA icons (192, 512)
-├── favicon.ico             Must stay in the root (browsers request /favicon.ico)
-├── manifest.json  robots.txt  sitemap.xml  ads.txt  CNAME  .nojekyll
-```
+1. Go to your repo on github.com.
+2. Select ALL existing files and DELETE them first. Commit that deletion.
+   (This prevents any stale file from a previous broken upload lingering
+   around and causing confusing bugs, like the Portuguese homepage
+   accidentally overwriting the English one last time.)
+3. Extract this zip locally.
+4. Select every file INSIDE the extracted folder (not the zip itself,
+   not the folder itself) and drag them ALL into GitHub's
+   "Add file -> Upload files" box in one single batch.
+5. Commit directly to `main`.
+6. Wait 1-2 minutes for GitHub Pages to rebuild, then hard-refresh
+   (Ctrl+Shift+R) the live site.
 
-All internal links use root paths (`/assets/...`, `/blog/`), so every page works
-no matter which folder it sits in.
+## Pages
 
-## Deploying
+- / (index.html) - homepage / calculator, English
+- /es.html, /fr.html, /pt.html, /zh.html - homepage translated into
+  Spanish, French, Portuguese and Chinese
+- /about.html, /contact.html, /privacy.html, /terms.html
+- /blog.html - guides hub
+- /blog-*.html - 6 individual guides (English only for now)
+- /calculator.html - redirect stub to / (kept only for old links)
 
-1. In the GitHub repo, delete all old files and commit.
-2. Extract the zip. Open the extracted folder.
-3. Select everything inside it (files AND folders) and drag it into
-   "Add file > Upload files". Dragging keeps the folders. Do not use the
-   "choose your files" button, because it flattens folders.
-4. Commit to `main`, wait 1 to 2 minutes, then hard refresh (Ctrl+Shift+R).
-5. In Google Search Console, resubmit `https://bottleneckcalculator.cc/sitemap.xml`.
+## Notes
 
-## Local preview
-
-Paths start with `/`, so open the site through a local server instead of
-double-clicking files:
-
-```
-python -m http.server 8000
-```
-
-Then visit http://localhost:8000
+- Only the homepage is translated so far. Nav links from the translated
+  homepages to About/Contact/Blog/etc. fall back to the English versions
+  until those are translated too.
+- The calculator's live results text (after clicking "Analyze") is still
+  generated in English by app.js regardless of page language - that is a
+  separate, bigger localization job.
+- Keep the AdSense script only if the publisher ID belongs to the correct
+  AdSense account.
+- og-image.png is the shared social-share preview image (1200x630),
+  referenced by every page's og:image / twitter:image tags.
