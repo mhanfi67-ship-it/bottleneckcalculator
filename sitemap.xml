@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://bottleneckcalculator.cc/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
+
   <url>
     <loc>https://bottleneckcalculator.cc/es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
+
   <url>
     <loc>https://bottleneckcalculator.cc/fr.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
+
   <url>
     <loc>https://bottleneckcalculator.cc/pt.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
+
   <url>
     <loc>https://bottleneckcalculator.cc/zh.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
-  <url><loc>https://bottleneckcalculator.cc/blog.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/about.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/contact.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/privacy.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/terms.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-how-to-check-pc-bottleneck.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-cpu-vs-gpu-bottleneck.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-best-cpu-for-gaming-guide.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-gpu-bottleneck-guide.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-ram-and-pc-performance.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-pc-usage-guide.html</loc></url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/terms.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-how-to-check-pc-bottleneck.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-cpu-vs-gpu-bottleneck.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-best-cpu-for-gaming-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-best-gpu-for-gaming-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-ram-and-pc-performance.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-pc-usage-guide.html</loc>
+  </url>
+
 </urlset>
