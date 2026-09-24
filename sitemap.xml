@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bottleneckcalculator.cc/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
@@ -11,6 +14,9 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/es.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
@@ -20,6 +26,9 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/fr.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
@@ -29,6 +38,9 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/pt.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
@@ -38,6 +50,9 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/zh.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
@@ -45,15 +60,70 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
-  <url><loc>https://bottleneckcalculator.cc/blog.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/about.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/contact.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/privacy.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/terms.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-how-to-check-pc-bottleneck.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-cpu-vs-gpu-bottleneck.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-best-cpu-for-gaming-guide.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-gpu-bottleneck-guide.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-ram-and-pc-performance.html</loc></url>
-  <url><loc>https://bottleneckcalculator.cc/blog-pc-usage-guide.html</loc></url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-how-to-check-pc-bottleneck.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-cpu-vs-gpu-bottleneck.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-best-cpu-for-gaming-guide.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-gpu-bottleneck-guide.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-ram-and-pc-performance.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-pc-usage-guide.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/about.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/contact.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/privacy.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/terms.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
