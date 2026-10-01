@@ -67,13 +67,13 @@ function analyze(){
   const cpuLimited=targetCpu<targetGpu;
   let verdict,copy,tip;
   if(balance>=82){
-    verdict="Healthy & balanced"; copy="Your selected CPU and GPU are a sensible match for this target.";
+    verdict="Estimated: Balanced"; copy="Your selected CPU and GPU are a sensible match for this target.";
     tip=thermal<65?"Improve airflow or cooling before upgrading hardware.":power<70?"Check PSU quality and capacity before sustained heavy loads.":"No urgent core upgrade. Focus on maintenance, drivers and game settings.";
   }else if(cpuLimited){
-    verdict="CPU-limited scenario"; copy=cpu[0]+" may limit "+gpu[0]+" in this workload.";
+    verdict="Estimated CPU limitation"; copy=cpu[0]+" may limit "+gpu[0]+" in this workload.";
     tip="Prioritize a faster CPU/platform, or raise resolution and visual settings to use more GPU capacity.";
   }else{
-    verdict="GPU-limited scenario"; copy=gpu[0]+" is the likely performance ceiling at this resolution.";
+    verdict="Estimated GPU limitation"; copy=gpu[0]+" is the likely performance ceiling at this resolution.";
     tip="A graphics-card upgrade may provide the clearest gain; lowering demanding visual settings can help now.";
   }
   if(ramScore<65) tip="Increase memory to at least "+ramNeed+" GB and use a matched dual-channel kit where supported.";
