@@ -42,3 +42,4 @@ same-named files (this has happened twice already with this project).
   AdSense account.
 - og-image.png is the shared social-share preview image (1200x630),
   referenced by every page's og:image / twitter:image tags.
+Update for testing
