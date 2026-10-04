@@ -1,0 +1,174 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Causes PC Stuttering? Fixing 1% Lows and Frame Pacing Issues</title><meta name="description" content="Learn how to fix PC stuttering in games by diagnosing 1% lows, frame time spikes, and whether your CPU, GPU, or RAM is causing the bottleneck."><meta name="keywords" content="PC stuttering, 1% lows, frame pacing, frame time, micro-stutter, CPU bottleneck, RAM bottleneck, GPU usage, gaming performance">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-stuttering-and-1-percent-lows-guide.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="What Causes PC Stuttering? Fixing 1% Lows and Frame Pacing Issues"><meta property="og:description" content="Learn how to fix PC stuttering in games by diagnosing 1% lows, frame time spikes, and whether your CPU, GPU, or RAM is causing the bottleneck."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-stuttering-and-1-percent-lows-guide.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What Causes PC Stuttering? Fixing 1% Lows and Frame Pacing Issues",
+      "description": "Learn how to fix PC stuttering in games by diagnosing 1% lows, frame time spikes, and whether your CPU, GPU, or RAM is causing the bottleneck.",
+      "mainEntityOfPage": "https://bottleneckcalculator.cc/blog-stuttering-and-1-percent-lows-guide.html",
+      "author": {"@type": "Organization", "name": "Bottleneck Calculator"},
+      "publisher": {"@type": "Organization", "name": "Bottleneck Calculator"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bottleneckcalculator.cc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bottleneckcalculator.cc/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "PC Stuttering and 1% Lows"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is my game stuttering even with high FPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stuttering with high average FPS is usually caused by poor 1% lows and inconsistent frame times. This happens when the CPU, RAM, or storage briefly struggles to deliver data to the GPU, causing occasional frame delays that feel like a stutter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are 1% lows in gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1% lows represent the average frame rate of the slowest 1% of frames rendered over a period of time. It is a critical metric for measuring stuttering, as a high average FPS with very poor 1% lows means the game is occasionally freezing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a CPU bottleneck cause stuttering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, a severe CPU bottleneck is a primary cause of micro-stuttering. If the processor hits 100% utilization on its active cores, it cannot send draw calls to the graphics card consistently, resulting in sudden frame rate drops."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="index.html" class="">Calculator</a><a href="index.html#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="index.html">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><span class="eyebrow">PC Troubleshooting Guide</span>
+<h1>What Causes PC Stuttering? Fixing 1% Lows and Frame Pacing Issues</h1>
+<p class="lead">Having a high average FPS means nothing if your game constantly freezes or stutters during action. Learn what causes micro-stuttering, how to interpret frame time and 1% lows, and how to identify whether your CPU, RAM, or storage is creating a bottleneck.</p>
+
+<section class="prose">
+<h2>The Quick Answer: Why Does Your PC Stutter?</h2>
+<p>PC stuttering happens when there is a significant delay in rendering a single frame. This delay is known as a <strong>frame time spike</strong>. Even if your game says you are getting 120 FPS (frames per second) on average, a single frame taking 100 milliseconds to render will be felt by the player as a visible stutter or hitch.</p>
+<p>The most common hardware causes for stuttering include:</p>
+<ul>
+  <li><strong>Severe CPU Bottlenecks:</strong> When the processor hits 100% usage on heavily used cores and cannot prepare frames fast enough for the graphics card.</li>
+  <li><strong>RAM Limitations:</strong> Running out of system memory, forcing Windows to use the much slower storage drive (pagefile) as emergency memory.</li>
+  <li><strong>VRAM Limitations:</strong> Running out of graphics card memory, forcing texture data to be constantly swapped in and out.</li>
+  <li><strong>Slow Storage:</strong> Running modern AAA games off a mechanical hard drive (HDD) instead of an NVMe SSD, causing asset-loading delays.</li>
+  <li><strong>Thermal Throttling:</strong> Your CPU or GPU suddenly dropping clock speeds to prevent overheating.</li>
+</ul>
+
+<h2>Understanding 1% Lows and Frame Time</h2>
+<p>To fix stuttering, you have to look beyond average FPS. The average FPS number hides the occasional long pauses that ruin the gaming experience. Instead, you need to monitor <strong>1% lows</strong> and <strong>frame time</strong>.</p>
+
+<h3>What are 1% Lows?</h3>
+<p>The <strong>1% low</strong> metric takes the slowest 1% of frames rendered during your gaming session and calculates their average. If your average FPS is 144, but your 1% low is 20 FPS, the game is experiencing severe stuttering. A smooth experience requires the 1% low number to be as close to the average FPS as possible.</p>
+
+<h3>What is Frame Time (or Frame Pacing)?</h3>
+<p>Frame time is the amount of time (measured in milliseconds, or ms) it takes your PC to render a single frame. At a perfectly smooth 60 FPS, every single frame should take exactly 16.6 milliseconds to render.</p>
+<p>If frame 1 takes 16.6ms, frame 2 takes 16.6ms, and frame 3 suddenly takes 150ms, that 150ms delay is a stutter. Monitoring your frame time graph using tools like MSI Afterburner is the most effective way to visually see stuttering.</p>
+
+<h2>How to Diagnose the Source of the Stutter</h2>
+<p>Stuttering is a symptom of a bottleneck. To fix it, you need to find out which component is holding up the rendering pipeline.</p>
+
+<h3>1. Is it a CPU Bottleneck?</h3>
+<p>The CPU is responsible for game logic, physics, and sending "draw calls" (instructions on what to render) to the GPU. If the CPU gets overwhelmed, the GPU has to sit idle waiting for the next instruction. This wait causes a stutter.</p>
+<p><strong>How to check:</strong> Monitor your per-core <a href="blog-pc-usage-guide.html">CPU utilization</a>. If any individual core is hitting 95-100% utilization simultaneously with a frame time spike, you are experiencing a severe CPU bottleneck.</p>
+<p><strong>The Fix:</strong> Close background applications, lower CPU-intensive settings (like crowd density, physics, or view distance), or cap your FPS to a lower number to give the CPU breathing room.</p>
+
+<h3>2. Is it a RAM Bottleneck?</h3>
+<p>Modern gaming requires enough <a href="blog-ram-gaming-bottleneck-guide.html">RAM</a> to hold game assets ready for the CPU. If you only have 8GB of RAM, modern games will run out of space. When this happens, Windows temporarily moves data to your storage drive (a process called paging).</p>
+<p>Storage drives are thousands of times slower than RAM. When the game needs that data back, it has to wait for the storage drive, resulting in a massive stutter.</p>
+<p><strong>How to check:</strong> Monitor your System RAM usage. If you are consistently above 90% total system RAM usage when stuttering occurs, memory capacity is likely your issue.</p>
+<p><strong>The Fix:</strong> Close Chrome tabs and background apps before gaming. Ultimately, upgrading from 8GB to 16GB or 32GB in a dual-channel configuration is the best permanent fix.</p>
+
+<h3>3. Is it a VRAM (Graphics Memory) Bottleneck?</h3>
+<p>Similar to system RAM, your graphics card has its own memory (VRAM) used to store high-resolution textures. If you play a modern game at 4K resolution on ultra settings with an 8GB graphics card, you might exceed the VRAM capacity.</p>
+<p>When VRAM is full, textures must be swapped in from system RAM over the PCIe bus, causing stutters when moving the camera or entering new areas.</p>
+<p><strong>How to check:</strong> Monitor dedicated GPU memory (VRAM) usage. If it is maxed out, this is a likely culprit.</p>
+<p><strong>The Fix:</strong> Lower the texture quality setting in the game options. Lowering the resolution from 4K to <a href="blog-1080p-vs-1440p-vs-4k-bottleneck-guide.html">1440p</a> also significantly reduces VRAM usage.</p>
+
+<h2>Software and Configuration Causes</h2>
+<p>Sometimes the hardware is perfectly capable, but software is causing the micro-stuttering.</p>
+
+<h3>Background Processes and Game Launchers</h3>
+<p>A random background process suddenly deciding to update or scan your PC can hijack CPU cycles away from your game. This is incredibly common with poorly optimized game launchers, aggressive antivirus software, or RGB control software.</p>
+
+<h3>Shader Compilation Stutter</h3>
+<p>Many modern PC games (especially Unreal Engine titles) suffer from "shader compilation stutter." This happens when the game compiles shaders while you are playing instead of beforehand in the main menu. Every time you see a new effect or enter a new area, the game stutters as the CPU rushes to compile the shader. There is often nothing you can do to fix this other than waiting for the developers to patch the game.</p>
+
+<h2>Conclusion</h2>
+<p>Fixing PC stuttering and improving your 1% lows is about ensuring a smooth, uninterrupted pipeline from the CPU to the GPU. By monitoring your CPU usage, RAM capacity, and frame time graph, you can isolate exactly which component is dropping the ball.</p>
+<p>If you suspect your hardware configuration is fundamentally unbalanced, use our <a href="index.html">bottleneck calculator</a> to check if your CPU and GPU pairing is likely to cause severe limitations in modern games.</p>
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Why is my game stuttering even with high FPS?</h3>
+  <p>Stuttering with high average FPS is usually caused by poor 1% lows and inconsistent frame times. This happens when the CPU, RAM, or storage briefly struggles to deliver data to the GPU, causing occasional frame delays that feel like a stutter.</p>
+</div>
+<div class="faq-item">
+  <h3>What are 1% lows in gaming?</h3>
+  <p>1% lows represent the average frame rate of the slowest 1% of frames rendered over a period of time. It is a critical metric for measuring stuttering, as a high average FPS with very poor 1% lows means the game is occasionally freezing.</p>
+</div>
+<div class="faq-item">
+  <h3>Can a CPU bottleneck cause stuttering?</h3>
+  <p>Yes, a severe CPU bottleneck is a primary cause of micro-stuttering. If the processor hits 100% utilization on its active cores, it cannot send draw calls to the graphics card consistently, resulting in sudden frame rate drops.</p>
+</div>
+<div class="faq-item">
+  <h3>Does capping FPS help with stuttering?</h3>
+  <p>Yes, often capping your frame rate slightly below your average FPS can eliminate stuttering. It prevents the CPU from hitting 100% utilization, ensuring it always has breathing room to deliver frames consistently, creating a smoother experience.</p>
+</div>
+</section>
+
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="index.html"><h3>Bottleneck Calculator</h3><p>Check your CPU and GPU pairing and get actionable upgrade advice.</p></a>
+<a class="card" href="blog-how-to-fix-pc-bottleneck.html"><h3>Fix PC Bottlenecks</h3><p>Practical optimization and upgrade solutions to improve performance.</p></a>
+<a class="card" href="blog-cpu-gpu-bottleneck-guide.html"><h3>CPU vs GPU Bottleneck</h3><p>Learn how to distinguish processor and graphics limits.</p></a>
+<a class="card" href="blog-ram-gaming-bottleneck-guide.html"><h3>RAM and PC Performance</h3><p>Understand how memory capacity and speed affect gaming.</p></a>
+</div></section></main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="index.html">Calculator</a><a href="blog.html">PC Guides</a><a href="index.html#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year"></span> Bottleneck Calculator. All rights reserved.</div></footer><script src="app.js" defer></script></body></html>
