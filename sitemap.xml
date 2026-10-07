@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bottleneckcalculator.cc/</loc>
     <lastmod>2026-10-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bottleneckcalculator.cc/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://bottleneckcalculator.cc/es.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bottleneckcalculator.cc/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://bottleneckcalculator.cc/pt.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://bottleneckcalculator.cc/zh.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bottleneckcalculator.cc/"/>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog.html</loc>
