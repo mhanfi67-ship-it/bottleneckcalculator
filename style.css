@@ -26,3 +26,14 @@ button,input,select{font:inherit}a{color:inherit;text-decoration:none}img,svg{ma
 @media(max-width:600px){.container{width:calc(100% - 24px)}.nav{height:64px}.nav-links{top:64px}.hero{padding-top:52px}.hero h1{font-size:clamp(2.8rem,14vw,4.5rem)}.calculator-shell{border-radius:20px}.calculator-head,.input-panel,.result-panel{padding:22px}.form-grid,.cards,.blog-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.score-row{align-items:flex-start}.score-ring{width:105px;height:105px;flex-basis:105px}.balance-visual{height:155px}.facts{grid-template-columns:1fr 1fr}.facts div:last-child{grid-column:1/-1}.section-heading{display:block}.section-heading p{margin-top:16px}.footer-grid{grid-template-columns:1fr}.page-main{padding:65px 0 80px}.method-section,.faq-section{padding:70px 0}.lang-switch a{padding:4px 6px;font-size:.68rem}.article-figure{max-width:100%}}
 .article-figure{margin:24px auto;max-width:720px}.article-figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 20px rgba(10,38,50,.08)}.article-figure figcaption{margin-top:8px;font-size:.8rem;color:var(--muted);text-align:center}
 .lang-switch{display:flex;align-items:center;gap:2px;margin-right:6px;font-size:.72rem;font-weight:700}.lang-switch a{padding:5px 7px;border-radius:8px;color:var(--muted)}.lang-switch a.active{background:var(--accent);color:#fff}.lang-switch a:not(.active):hover{background:var(--surface-2,rgba(0,0,0,.05))}
+
+.byline{margin:8px 0 2px;font-size:.95rem;color:var(--muted,#5b6b78)}
+.byline a{font-weight:700}
+.author-box{display:flex;gap:16px;align-items:flex-start;margin:36px 0 8px;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.author-box p{margin:6px 0 0}
+.author-box .role{display:block;font-size:.9rem;color:var(--muted,#5b6b78)}
+.author-avatar{flex:0 0 52px;height:52px;border-radius:50%;background:#087f8c;color:#fff;display:grid;place-items:center;font-weight:800;letter-spacing:.5px}
+.author-hero{display:flex;gap:20px;align-items:center;margin:8px 0 18px}
+.author-hero .author-avatar{flex-basis:84px;height:84px;font-size:1.6rem}
+.author-hero h1{margin:0}
+.author-hero .role{margin:4px 0 0;color:var(--muted,#5b6b78)}

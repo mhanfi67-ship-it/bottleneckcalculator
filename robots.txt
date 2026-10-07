@@ -1,5 +1,7 @@
 User-agent: *
+Allow: /
 
+User-agent: Mediapartners-Google
 Allow: /
 
 Sitemap: https://bottleneckcalculator.cc/sitemap.xml
