@@ -1,0 +1,125 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag</title><meta name="description" content="V-Sync vs G-Sync vs FreeSync explained. Learn how each affects tearing, input lag and GPU usage, and how to set a sensible FPS cap for smooth gaming."><meta name="keywords" content="V-Sync vs G-Sync vs FreeSync, best FPS cap for G-Sync, variable refresh rate, screen tearing, input lag V-Sync, FreeSync settings, FPS limiter, monitor refresh rate gaming">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag"><meta property="og:description" content="V-Sync vs G-Sync vs FreeSync explained. Learn how each affects tearing, input lag and GPU usage, and how to set a sensible FPS cap for smooth gaming."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Bottleneck Calculator guide card" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/og-image.png" name="twitter:image"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509" crossorigin="anonymous"></script>
+<meta property="og:site_name" content="Bottleneck Calculator"><meta property="og:locale" content="en_US"><meta name="twitter:title" content="V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag"><meta name="twitter:description" content="V-Sync vs G-Sync vs FreeSync explained. Learn how each affects tearing, input lag and GPU usage, and how to set a sensible FPS cap for smooth gaming."><meta name="author" content="Bottleneck Calculator"><meta property="article:published_time" content="2026-10-11"><meta property="article:modified_time" content="2026-10-11"><link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag","description":"V-Sync vs G-Sync vs FreeSync explained. Learn how each affects tearing, input lag and GPU usage, and how to set a sensible FPS cap for smooth gaming.","mainEntityOfPage":{"@type":"WebPage","@id":"https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html"},"url":"https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html","inLanguage":"en","image":["https://bottleneckcalculator.cc/og-image.png"],"datePublished":"2026-10-11","dateModified":"2026-10-11","author":{"@type":"Person","@id":"https://bottleneckcalculator.cc/muhammad-hanfi.html#person","name":"Muhammad Hanfi","url":"https://bottleneckcalculator.cc/muhammad-hanfi.html"},"publisher":{"@type":"Organization","@id":"https://bottleneckcalculator.cc/#org","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","logo":{"@type":"ImageObject","url":"https://bottleneckcalculator.cc/icon-512.png","width":512,"height":512}}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bottleneckcalculator.cc/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://bottleneckcalculator.cc/blog.html"},{"@type":"ListItem","position":3,"name":"V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag","item":"https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I use V-Sync with G-Sync or FreeSync?","acceptedAnswer":{"@type":"Answer","text":"Many guides recommend turning V-Sync on in the graphics driver and off in the game when variable refresh is enabled, together with a frame cap slightly below the refresh rate. Behavior can vary, so test with your own setup."}},{"@type":"Question","name":"What FPS cap should I use for a 144Hz monitor?","acceptedAnswer":{"@type":"Answer","text":"A cap of about 3 FPS below the maximum, such as 141, is a common starting point. It keeps the game inside the variable refresh range."}},{"@type":"Question","name":"Does V-Sync lower FPS?","acceptedAnswer":{"@type":"Answer","text":"It can. If your PC cannot hold the refresh rate, some V-Sync modes drop to fractions of it, which looks like a sudden loss in smoothness. Variable refresh avoids most of that."}},{"@type":"Question","name":"Is FreeSync as good as G-Sync?","acceptedAnswer":{"@type":"Answer","text":"Both achieve the same goal. Quality depends on the monitor's implementation and range, so look at the specific model's specifications and reviews."}},{"@type":"Question","name":"Why is my GPU usage low when I cap FPS?","acceptedAnswer":{"@type":"Answer","text":"Because the card finishes frames faster than the cap requires and waits. This is expected and does not mean your PC has a bottleneck."}}]}</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="/" class="">Calculator</a><a href="/#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="/">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="blog.html">Guides</a> / <span aria-current="page">V-Sync vs G-Sync vs FreeSync</span></nav><span class="eyebrow">Display Settings</span>
+<h1>V-Sync vs G-Sync vs FreeSync: Best Settings, FPS Caps and Input Lag</h1>
+<p class="byline">By <a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a>, founder and editor. Published 2026-10-11.</p>
+
+<p class="lead">Screen tearing, stutter and input lag all come back to one question: how does your graphics card hand frames to your monitor? V-Sync, G-Sync and FreeSync are three answers to that question. This guide explains what each one does, what it costs, and the setup most players find smoothest.</p>
+
+<section class="prose">
+
+<h2>The Problem These Features Solve</h2>
+<p>Your monitor refreshes at a fixed rate, such as 60 or 144 times per second. Your graphics card produces frames at a rate that constantly changes. When a new frame arrives while the monitor is part-way through drawing the previous one, you can see a horizontal split called <strong>screen tearing</strong>. The three technologies below handle that mismatch in different ways.</p>
+
+<h2>What Each Option Does</h2>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Option</th><th>How it works</th><th>Main benefit</th><th>Main drawback</th></tr></thead>
+<tbody>
+<tr><td>No sync</td><td>Frames are sent as soon as they are ready</td><td>Lowest delay</td><td>Visible tearing</td></tr>
+<tr><td>V-Sync</td><td>The GPU waits for the monitor's refresh before showing a frame</td><td>No tearing on any monitor</td><td>Can add input lag and uneven pacing when FPS drops below refresh</td></tr>
+<tr><td>G-Sync / FreeSync (variable refresh rate)</td><td>The monitor changes its refresh to match the frame rate</td><td>No tearing with smoother pacing across a range of FPS</td><td>Needs a compatible monitor, GPU and cable, and works only within the monitor's range</td></tr>
+</tbody></table></div>
+
+<h2>V-Sync Explained</h2>
+<p>Traditional V-Sync forces the graphics card to line frames up with the monitor's refresh. It removes tearing, but when the card cannot keep up with the refresh rate, some implementations drop to fractions of it, such as half, which feels like a sudden stutter. Because frames queue up waiting for the next refresh, it can also add delay between your input and what you see. That is why competitive players often avoid it.</p>
+
+<h2>G-Sync and FreeSync Explained</h2>
+<p>G-Sync is NVIDIA's name for variable refresh rate, and FreeSync is AMD's. Both let the monitor wait for the graphics card instead of the other way around, so each frame is shown when it is ready. You also see these terms:</p>
+<ul>
+<li><strong>G-Sync Compatible</strong> means a FreeSync-type monitor that NVIDIA has validated for its cards.</li>
+<li><strong>FreeSync Premium</strong> adds requirements such as support for low frame rate compensation.</li>
+<li><strong>HDMI and DisplayPort adaptive sync</strong> are the underlying standards many monitors implement. Support depends on both the monitor and the connection.</li>
+</ul>
+<p>Variable refresh works inside the range the monitor supports. Below the bottom of that range, many monitors use low frame rate compensation, which repeats frames to stay in range. Look up your monitor's specification to see the exact range.</p>
+
+<h2>A Setup That Works for Most Players</h2>
+<p>Exact menus vary by monitor and driver, but this combination is widely recommended for smooth play on a variable refresh monitor.</p>
+<ol>
+<li><strong>Enable variable refresh in the monitor menu.</strong> Look for FreeSync, Adaptive Sync or G-Sync in the on-screen display.</li>
+<li><strong>Enable it in your graphics driver.</strong> In the NVIDIA or AMD software, turn on G-Sync or FreeSync for your display.</li>
+<li><strong>Turn on V-Sync in the driver, and set it off inside the game.</strong> This helps the display handle frame delivery cleanly and avoids tearing at the top of the range.</li>
+<li><strong>Cap your frame rate slightly below the refresh rate.</strong> A cap of about 3 FPS under the maximum, for example 141 FPS on a 144Hz monitor, keeps the game inside the variable refresh range. Use the in-game limiter or the driver's maximum frame rate setting.</li>
+<li><strong>Use a low-latency mode if your game offers one.</strong> NVIDIA Reflex and AMD Anti-Lag are designed to reduce the delay between input and display.</li>
+</ol>
+
+<h2>How an FPS Cap Affects GPU Usage</h2>
+<p>A frame cap changes what your hardware reports, and that can look like a problem when it is not one. If your graphics card could render 200 FPS but you cap at 141, the card idles part of the time, so GPU usage drops below 100%. That is expected behavior, not a CPU bottleneck. Before concluding that something is holding you back, remove the cap and watch what happens. Our guide on <a href="blog-how-to-fix-low-gpu-usage.html">fixing low GPU usage</a> walks through this diagnosis, and the <a href="blog-how-to-check-pc-bottleneck.html">bottleneck checking guide</a> shows how to test properly.</p>
+
+<h2>Which Option Fits Which Player</h2>
+<ul>
+<li><strong>Single-player and cinematic games.</strong> Variable refresh with a small cap gives smooth, tear-free results with low delay.</li>
+<li><strong>Competitive shooters.</strong> Many players run uncapped or capped high with variable refresh, accepting tiny amounts of tearing in exchange for the lowest delay. A low-latency mode is more useful here than V-Sync.</li>
+<li><strong>Monitors without variable refresh.</strong> Use V-Sync if tearing bothers you and your PC stays above the refresh rate. Otherwise, a frame cap alone can reduce tearing and heat.</li>
+<li><strong>Weak PCs struggling to hit 60.</strong> Lower settings first, because sync features cannot add frames. See <a href="blog-fix-pc-bottleneck-boost-fps-tips.html">how to fix a PC bottleneck and boost FPS</a>.</li>
+</ul>
+
+<h2>Common Problems and Fixes</h2>
+<ul>
+<li><strong>Tearing still appears.</strong> Check that variable refresh is enabled in both the monitor and the driver, and that the game runs in a full-screen or borderless mode that the driver supports.</li>
+<li><strong>Flicker in menus or loading screens.</strong> Some panels, especially certain VA and OLED models, can flicker when the frame rate swings widely. Capping the menu frame rate often helps.</li>
+<li><strong>Stutter even with sync on.</strong> The cause may be CPU spikes, shader compilation or storage rather than the display. Read <a href="blog-stuttering-and-1-percent-lows-guide.html">what causes PC stuttering</a>.</li>
+<li><strong>Refresh rate is wrong.</strong> Confirm Windows is set to your monitor's highest refresh rate. Our <a href="blog-windows-settings-for-gaming-performance.html">Windows gaming settings guide</a> shows where.</li>
+<li><strong>Frame generation feels odd.</strong> Features that insert extra frames add their own delay. Our article on <a href="blog-dlss-fsr-frame-generation-bottleneck.html">DLSS, FSR and frame generation</a> explains how they interact with your limits.</li>
+</ul>
+
+<h2>Does Refresh Rate Matter More Than Resolution?</h2>
+<p>That is a personal choice, but it does affect which part of your PC is under pressure. High refresh rates at lower resolutions put more load on the CPU, while high resolutions put more load on the GPU. For the details, see our <a href="blog-1080p-vs-1440p-vs-4k-bottleneck-guide.html">1080p, 1440p and 4K bottleneck guide</a>.</p>
+
+<h2>Conclusion</h2>
+<p>V-Sync prevents tearing at a possible cost in delay and smoothness. G-Sync and FreeSync adapt the monitor to your frame rate and usually feel better when combined with a small FPS cap. Choose the setup that fits how you play, and remember that a cap lowers GPU usage by design. To check that your CPU and GPU are balanced for your refresh rate and resolution, try the free <a href="/">Bottleneck Calculator</a>.</p>
+
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Should I use V-Sync with G-Sync or FreeSync?</h3>
+  <p>Many guides recommend turning V-Sync on in the graphics driver and off in the game when variable refresh is enabled, together with a frame cap slightly below the refresh rate. Behavior can vary, so test with your own setup.</p>
+</div>
+<div class="faq-item">
+  <h3>What FPS cap should I use for a 144Hz monitor?</h3>
+  <p>A cap of about 3 FPS below the maximum, such as 141, is a common starting point. It keeps the game inside the variable refresh range.</p>
+</div>
+<div class="faq-item">
+  <h3>Does V-Sync lower FPS?</h3>
+  <p>It can. If your PC cannot hold the refresh rate, some V-Sync modes drop to fractions of it, which looks like a sudden loss in smoothness. Variable refresh avoids most of that.</p>
+</div>
+<div class="faq-item">
+  <h3>Is FreeSync as good as G-Sync?</h3>
+  <p>Both achieve the same goal. Quality depends on the monitor&#x27;s implementation and range, so look at the specific model&#x27;s specifications and reviews.</p>
+</div>
+<div class="faq-item">
+  <h3>Why is my GPU usage low when I cap FPS?</h3>
+  <p>Because the card finishes frames faster than the cap requires and waits. This is expected and does not mean your PC has a bottleneck.</p>
+</div>
+</section>
+
+<aside class="author-box"><div class="author-avatar" aria-hidden="true">MH</div><div><strong><a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a></strong><span class="role">Founder and editor, Bottleneck Calculator</span><p>Muhammad builds the calculator and writes and reviews these guides. Spotted an error? <a href="contact.html">Send a correction</a>.</p></div></aside>
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="/"><h3>Free PC Bottleneck Calculator</h3><p>Estimate CPU and GPU balance for your resolution and workload.</p></a>
+<a class="card" href="blog-how-to-fix-low-gpu-usage.html"><h3>Fix Low GPU Usage</h3><p>FPS caps, CPU limits and settings explained.</p></a>
+<a class="card" href="blog-stuttering-and-1-percent-lows-guide.html"><h3>What Causes PC Stuttering?</h3><p>Diagnose 1% lows and frame pacing.</p></a>
+<a class="card" href="blog-1080p-vs-1440p-vs-4k-bottleneck-guide.html"><h3>Resolution Bottlenecks</h3><p>How 1080p, 1440p and 4K shift the limit.</p></a>
+<a class="card" href="blog-windows-settings-for-gaming-performance.html"><h3>Windows Settings for Gaming</h3><p>What helps and what to skip.</p></a>
+</div></section></main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="/">Calculator</a><a href="blog.html">PC Guides</a><a href="/#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="muhammad-hanfi.html">Muhammad Hanfi</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year">2026</span> Bottleneck Calculator. All rights reserved. Built and edited by <a href="muhammad-hanfi.html">Muhammad Hanfi</a>.</div></footer><script src="app.js" defer></script></body></html>
