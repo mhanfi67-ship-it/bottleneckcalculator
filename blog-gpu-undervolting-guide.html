@@ -1,0 +1,113 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Undervolt Your GPU: Lower Temps, Same FPS</title><meta name="description" content="Learn how to undervolt your GPU safely using MSI Afterburner. Lower temperatures, reduce noise, and maintain gaming performance by optimizing your voltage curve."><meta name="keywords" content="GPU undervolting, undervolt GPU guide, lower GPU temperatures, MSI Afterburner undervolt, GPU voltage curve, reduce GPU noise, optimize GPU performance">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-gpu-undervolting-guide.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="How to Undervolt Your GPU: Lower Temps, Same FPS"><meta property="og:description" content="Learn how to undervolt your GPU safely using MSI Afterburner. Lower temperatures, reduce noise, and maintain gaming performance by optimizing your voltage curve."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/images/blog/gpu-undervolting-guide.webp" property="og:image"/><meta content="1400" property="og:image:width"/><meta content="788" property="og:image:height"/><meta content="Technical visual comparing a stock GPU voltage curve with an optimized undervolt curve showing identical max frequency at lower voltage" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/images/blog/gpu-undervolting-guide.webp" name="twitter:image"/><meta content="Technical visual comparing a stock GPU voltage curve with an optimized undervolt curve showing identical max frequency at lower voltage" name="twitter:image:alt"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-gpu-undervolting-guide.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6468705353163777" crossorigin="anonymous"></script>
+<meta property="og:site_name" content="Bottleneck Calculator"><meta property="og:locale" content="en_US"><meta name="twitter:title" content="How to Undervolt Your GPU: Lower Temps, Same FPS"><meta name="twitter:description" content="Learn how to undervolt your GPU safely using MSI Afterburner. Lower temperatures, reduce noise, and maintain gaming performance by optimizing your voltage curve."><meta name="author" content="Bottleneck Calculator"><meta property="article:published_time" content="2026-10-15"><meta property="article:modified_time" content="2026-10-15"><link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Undervolt Your GPU: Lower Temps, Same FPS","description":"Learn how to undervolt your GPU safely using MSI Afterburner. Lower temperatures, reduce noise, and maintain gaming performance by optimizing your voltage curve.","mainEntityOfPage":{"@type":"WebPage","@id":"https://bottleneckcalculator.cc/blog-gpu-undervolting-guide.html"},"url":"https://bottleneckcalculator.cc/blog-gpu-undervolting-guide.html","inLanguage":"en","image":["https://bottleneckcalculator.cc/images/blog/gpu-undervolting-guide.webp"],"datePublished":"2026-10-15","dateModified":"2026-10-15","author":{"@type":"Person","@id":"https://bottleneckcalculator.cc/muhammad-hanfi.html#person","name":"Muhammad Hanfi","url":"https://bottleneckcalculator.cc/muhammad-hanfi.html"},"publisher":{"@type":"Organization","@id":"https://bottleneckcalculator.cc/#org","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","logo":{"@type":"ImageObject","url":"https://bottleneckcalculator.cc/icon-512.png","width":512,"height":512}}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bottleneckcalculator.cc/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://bottleneckcalculator.cc/blog.html"},{"@type":"ListItem","position":3,"name":"How to Undervolt Your GPU: Lower Temps, Same FPS","item":"https://bottleneckcalculator.cc/blog-gpu-undervolting-guide.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is undervolting a GPU safe?","acceptedAnswer":{"@type":"Answer","text":"Yes, undervolting is completely safe. Unlike overvolting, supplying less voltage cannot damage your hardware. The worst that can happen is a game crash or system reboot if the voltage is set too low for a given frequency."}},{"@type":"Question","name":"Will undervolting lower my FPS?","acceptedAnswer":{"@type":"Answer","text":"If done correctly, undervolting will not lower your FPS. In fact, by reducing temperatures and preventing thermal throttling, it can provide more stable and sometimes even slightly higher average frame rates."}},{"@type":"Question","name":"Can I undervolt a laptop GPU?","acceptedAnswer":{"@type":"Answer","text":"Yes, undervolting is especially beneficial for laptop GPUs because they are constrained by limited cooling and strict power limits. Reducing voltage helps the laptop maintain higher clock speeds without hitting thermal limits."}}]}</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="/" class="">Calculator</a><a href="/#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="/">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="blog.html">Guides</a> / <span aria-current="page">GPU Undervolting Guide</span></nav><span class="eyebrow">Optimization Guide</span>
+<h1>How to Undervolt Your GPU: Lower Temps, Same FPS</h1>
+<p class="byline">By <a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a>, founder and editor. Published 2026-10-15.</p>
+
+<p class="lead">Modern graphics cards are tuned out of the box to run at higher voltages than strictly necessary to ensure stability for every piece of silicon. Undervolting is the process of lowering this voltage while maintaining the same target clock speed. The result? A cooler, quieter card that draws less power without sacrificing gaming performance.</p>
+
+<figure class="article-figure"><img src="images/blog/gpu-undervolting-guide.webp" alt="Technical visual comparing a stock GPU voltage curve with an optimized undervolt curve showing identical max frequency at lower voltage" width="1400" height="788" decoding="async" fetchpriority="high"/><figcaption>A typical GPU voltage/frequency curve. By flattening the curve earlier, the GPU reaches its maximum boost clock at a lower voltage.</figcaption></figure>
+
+<section class="prose">
+
+<h2>What is GPU Undervolting?</h2>
+<p>Undervolting is simply restricting the maximum voltage your GPU is allowed to pull at a given frequency. Out of the box, manufacturers apply generous voltage limits to guarantee that even the worst silicon yields will run stably at advertised speeds. If you have an average or good chip, it requires less voltage to hit those same speeds.</p>
+<p>When you lower the voltage, the graphics card produces less heat. Because modern GPUs dynamically boost their clocks based on thermal headroom, running cooler means the card is less likely to hit <a href="blog-thermal-throttling-vs-cpu-bottleneck.html">thermal throttling</a> limits. This can lead to more stable frame rates and quieter fans.</p>
+
+<h2>Is Undervolting Safe?</h2>
+<p>Yes. Undervolting is entirely safe. Unlike overclocking with extra voltage—which increases heat and can degrade silicon over time—undervolting reduces thermal stress. The worst-case scenario during testing is that you lower the voltage too much for the target frequency, causing the game to crash or the driver to reset. A quick system reboot or restarting the overclocking software resolves this instantly, with zero risk of physical damage.</p>
+
+<h2>What You Need to Get Started</h2>
+<ul>
+<li><strong>MSI Afterburner:</strong> The industry standard tool for tweaking GPU voltage and clocks. It works with almost all NVIDIA and AMD cards.</li>
+<li><strong>A Benchmark Tool:</strong> Software like Unigine Superposition, 3DMark Time Spy, or a demanding built-in game benchmark (e.g., Cyberpunk 2077) to test stability.</li>
+<li><strong>Hardware Monitoring:</strong> Use the overlay in MSI Afterburner to monitor Core Clock (MHz), GPU Temperature, and GPU Voltage (mV). Or, check out our guide on <a href="blog-how-to-check-pc-bottleneck.html">how to check PC bottlenecks and usage</a>.</li>
+</ul>
+
+<h2>Step-by-Step Guide to Undervolting</h2>
+
+<h3>Step 1: Establish a Baseline</h3>
+<p>Before tweaking, run your chosen benchmark at stock settings. Note down the maximum core clock your GPU hits, the maximum temperature, and the voltage it settles at under load. You can also use our <a href="https://bottleneckcalculator.cc/">PC Bottleneck Calculator</a> to understand if your GPU is fully utilized in your current games.</p>
+
+<h3>Step 2: Open the Voltage/Frequency Curve</h3>
+<p>Open MSI Afterburner and press <code>Ctrl + F</code>. This opens the Voltage/Frequency curve editor. The X-axis represents Voltage (mV) and the Y-axis represents Core Clock (MHz).</p>
+
+<h3>Step 3: Select a Target Voltage and Frequency</h3>
+<p>Look at the baseline you established. A common starting point for RTX 3000/4000 series cards is around 875mV to 925mV, targeting a frequency near your observed stock boost clock (e.g., 1850MHz to 1950MHz). Find the corresponding voltage point on the X-axis.</p>
+
+<h3>Step 4: Adjust the Curve</h3>
+<ol>
+<li>Drag the point at your chosen target voltage up to your target frequency.</li>
+<li>Hold down the <code>Shift</code> key, click the space just to the right of your adjusted point, and drag your mouse to the far right of the graph to highlight all subsequent points.</li>
+<li>Press <code>Enter</code> to flatten the rest of the curve. Alternatively, you can click the main Afterburner window and hit "Apply" (the checkmark icon). This tells the GPU: "Never exceed this voltage, but try to hit this frequency."</li>
+</ol>
+
+<h3>Step 5: Test for Stability</h3>
+<p>Run your benchmark again. If it completes without crashing or artifacting, you have a successful undervolt! You should notice lower temperatures and lower fan speeds.</p>
+
+<h2>Troubleshooting Instability</h2>
+<p>If your game crashes or freezes during testing, it means the GPU did not have enough voltage to maintain the target frequency. You have two choices:</p>
+<ul>
+<li><strong>Increase the voltage:</strong> Move your target point one step to the right on the curve (e.g., from 900mV to 925mV) and flatten the rest of the curve again.</li>
+<li><strong>Decrease the target clock:</strong> Lower the target frequency by 15-30MHz at your current voltage point.</li>
+</ul>
+<p>Repeat the testing process until you find a stable point. Remember to save your stable profile in MSI Afterburner and set it to apply on startup once you are confident it is rock solid.</p>
+
+<h2>Undervolting vs. Underclocking vs. Power Limiting</h2>
+<p>It's important to understand the distinctions between these terms:</p>
+<ul>
+<li><strong>Undervolting:</strong> Lowering voltage while maintaining stock clock speeds. (Goal: Same performance, lower heat/power).</li>
+<li><strong>Underclocking:</strong> Deliberately lowering the core clock speed, usually resulting in a performance loss.</li>
+<li><strong>Power Limiting:</strong> Simply dragging the "Power Limit" slider down in Afterburner. The GPU will throttle its clock speeds and voltage aggressively to stay under the wattage cap. While easy, it often results in worse <a href="blog-stuttering-and-1-percent-lows-guide.html">1% lows and stuttering</a> compared to a manual undervolt curve.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Undervolting is one of the most beneficial tweaks you can apply to a modern PC, right alongside enabling XMP (see <a href="blog-how-to-enable-xmp-expo.html">how to enable XMP or EXPO</a>). It requires a bit of patience to test for stability, but the reward of a cooler, quieter system that performs identically to stock is well worth the effort. For a complete system overview, run your parts through the <a href="https://bottleneckcalculator.cc/">Free PC Bottleneck Calculator</a> to ensure the rest of your build is balanced.</p>
+
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Is undervolting a GPU safe?</h3>
+  <p>Yes, undervolting is completely safe. Unlike overvolting, supplying less voltage cannot damage your hardware. The worst that can happen is a game crash or system reboot if the voltage is set too low for a given frequency.</p>
+</div>
+<div class="faq-item">
+  <h3>Will undervolting lower my FPS?</h3>
+  <p>If done correctly, undervolting will not lower your FPS. In fact, by reducing temperatures and preventing thermal throttling, it can provide more stable and sometimes even slightly higher average frame rates.</p>
+</div>
+<div class="faq-item">
+  <h3>Can I undervolt a laptop GPU?</h3>
+  <p>Yes, undervolting is especially beneficial for laptop GPUs because they are constrained by limited cooling and strict power limits. Reducing voltage helps the laptop maintain higher clock speeds without hitting thermal limits.</p>
+</div>
+</section>
+
+<aside class="author-box"><div class="author-avatar" aria-hidden="true">MH</div><div><strong><a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a></strong><span class="role">Founder and editor, Bottleneck Calculator</span><p>Muhammad builds the calculator and writes and reviews these guides. Spotted an error? <a href="contact.html">Send a correction</a>.</p></div></aside>
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="https://bottleneckcalculator.cc/"><h3>Free PC Bottleneck Calculator</h3><p>Estimate CPU and GPU balance for your resolution and workload.</p></a>
+<a class="card" href="blog-gpu-bottleneck-guide.html"><h3>GPU Bottleneck Guide</h3><p>Learn how to identify if your graphics card is limiting performance.</p></a>
+<a class="card" href="blog-thermal-throttling-vs-cpu-bottleneck.html"><h3>Thermal Throttling vs Bottlenecks</h3><p>Tell heat problems from performance limits and learn safe gaming temps.</p></a>
+<a class="card" href="blog-how-to-check-pc-bottleneck.html"><h3>How to Check a PC Bottleneck</h3><p>Monitor utilization, frame times, and temperatures.</p></a>
+<a class="card" href="blog-how-to-fix-low-gpu-usage.html"><h3>How to Fix Low GPU Usage</h3><p>Find out why your GPU sits at 40 to 60% and how to fix it.</p></a>
+</div></section></main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="/">Calculator</a><a href="blog.html">PC Guides</a><a href="/#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="muhammad-hanfi.html">Muhammad Hanfi</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year">2026</span> Bottleneck Calculator. All rights reserved. Built and edited by <a href="muhammad-hanfi.html">Muhammad Hanfi</a>.</div></footer><script src="app.js" defer></script></body></html>
