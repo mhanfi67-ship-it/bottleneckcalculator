@@ -82,7 +82,9 @@ function analyze(){
   const res=+$("#resolution").value, workload=$("#workload").value;
   const ram=+$("#ram").value, storage=$("#storage").value;
   const temp=+$("#temperature").value, psu=+$("#psu").value;
-  const resGpu={1080:.78,1440:1,2160:1.27}[res];
+  // GPU headroom at each resolution, relative to 1440p. Lower resolutions give the
+  // GPU less work per frame (more headroom, so the CPU limits sooner); 4K gives it more.
+  const resGpu={1080:1.25,1440:1,2160:.72}[res];
   const useCpu={gaming:1.08,creative:.96,office:.72,mixed:.90}[workload];
   const targetGpu=gpu[1]*resGpu, targetCpu=cpu[1]*useCpu;
   const gap=Math.abs(targetCpu-targetGpu)/Math.max(targetCpu,targetGpu);
