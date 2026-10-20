@@ -53,6 +53,9 @@ const parts = {
   ]
 };
 
+// Part search boxes above the CPU and GPU lists. Set to false to remove them.
+const ENABLE_PART_SEARCH = true;
+
 const $ = s => document.querySelector(s);
 const clamp = (n,min=0,max=100) => Math.max(min, Math.min(max, Math.round(n)));
 
@@ -74,6 +77,7 @@ function setMeter(name,value){
 }
 
 function analyze(){
+  if($("#cpu").value===""||$("#gpu").value==="") return;
   const cpu=parts.cpu[+$("#cpu").value], gpu=parts.gpu[+$("#gpu").value];
   const res=+$("#resolution").value, workload=$("#workload").value;
   const ram=+$("#ram").value, storage=$("#storage").value;
@@ -124,9 +128,46 @@ function analyze(){
   $("#advice").innerHTML="<b>Next step:</b> "+tip;
 }
 
+
+function addPartSearch(id,list){
+  const select=$(id);
+  if(!select||!select.parentNode) return;
+  const lang=(document.documentElement.lang||"en").slice(0,2);
+  const words={en:["Type to search","No matches"],es:["Escribe para buscar","Sin resultados"],fr:["Tapez pour chercher","Aucun résultat"],pt:["Digite para pesquisar","Nenhum resultado"],zh:["输入以搜索","无匹配结果"]}[lang]||["Type to search","No matches"];
+  if(!document.getElementById("part-search-style")){
+    const st=document.createElement("style"); st.id="part-search-style";
+    st.textContent=".field .part-search{width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.13);background:#0a1d26;color:#fff;border-radius:12px;padding:10px 14px;outline:0;margin-bottom:8px;font-size:.9rem}.field .part-search::placeholder{color:#7f9ba3}.field .part-search:focus{border-color:#2dd4bf}";
+    document.head.append(st);
+  }
+  const input=document.createElement("input");
+  input.type="search"; input.className="part-search"; input.placeholder=words[0];
+  input.setAttribute("aria-label",words[0]+": "+(select.labels&&select.labels[0]?select.labels[0].textContent:id));
+  input.autocomplete="off";
+  select.parentNode.insertBefore(input,select);
+  input.addEventListener("input",()=>{
+    const q=input.value.toLowerCase().trim().replace(/\s+/g," ");
+    const terms=q.split(" ").filter(Boolean);
+    const phrase=list.some(p=>p[0].toLowerCase().includes(q));
+    const current=select.value;
+    select.innerHTML="";
+    list.forEach((p,i)=>{
+      const name=p[0].toLowerCase();
+      if(phrase?name.includes(q):terms.every(t=>name.includes(t))){
+        const o=document.createElement("option"); o.value=i; o.textContent=p[0];
+        if(String(i)===current) o.selected=true;
+        select.append(o);
+      }
+    });
+    if(!select.options.length){
+      const o=document.createElement("option"); o.textContent=words[1]; o.disabled=true; o.value=""; select.append(o);
+    }
+  });
+}
+
 function setup(){
   fillSelect("#cpu",parts.cpu,"AMD Ryzen 5 7600X");
   fillSelect("#gpu",parts.gpu,"NVIDIA RTX 4070");
+  if(ENABLE_PART_SEARCH){ addPartSearch("#cpu",parts.cpu); addPartSearch("#gpu",parts.gpu); }
   const form=$("#calculatorForm");
   if(form){ form.addEventListener("submit",e=>{e.preventDefault();analyze(); $("#calculator").scrollIntoView({behavior:"smooth",block:"start"});}); analyze(); }
   const temp=$("#temperature"), psu=$("#psu");
