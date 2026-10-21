@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-does-ram-speed-affect-fps.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-ray-tracing-cpu-gpu-bottleneck.html</loc>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-dlss-fsr-frame-generation-bottleneck.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-gpu-bottleneck-guide.html</loc>
@@ -186,10 +186,14 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-lag-vs-low-fps-internet-or-pc.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-resizable-bar-does-it-increase-fps.html</loc>
     <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
 </urlset>

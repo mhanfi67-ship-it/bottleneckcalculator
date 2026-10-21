@@ -1,0 +1,130 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVIDIA Reflex vs AMD Anti-Lag: Does It Reduce Input Lag?</title><meta name="description" content="How NVIDIA Reflex, AMD Anti-Lag 2 and Intel XeLL cut input lag, why they help most when GPU-bound, and which in-game and driver settings to use."><meta name="keywords" content="nvidia reflex, amd anti-lag 2, input lag, system latency, low latency mode, render queue, intel xell">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="NVIDIA Reflex vs AMD Anti-Lag: Does It Reduce Input Lag?"><meta property="og:description" content="How NVIDIA Reflex, AMD Anti-Lag 2 and Intel XeLL cut input lag, why they help most when GPU-bound, and which in-game and driver settings to use."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/images/blog/reflex-anti-lag-render-queue-latency.webp" property="og:image"/><meta content="1400" property="og:image:width"/><meta content="788" property="og:image:height"/><meta content="Timeline diagram at 60 FPS comparing a GPU-bound game with a full render queue, where a frame waits about two frames before rendering for roughly 58 ms of delay, against the same game with Reflex or Anti-Lag on, where the queue stays empty and delay is roughly 25 ms" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/images/blog/reflex-anti-lag-render-queue-latency.webp" name="twitter:image"/><meta content="Timeline diagram at 60 FPS comparing a GPU-bound game with a full render queue, where a frame waits about two frames before rendering for roughly 58 ms of delay, against the same game with Reflex or Anti-Lag on, where the queue stays empty and delay is roughly 25 ms" name="twitter:image:alt"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509" crossorigin="anonymous"></script>
+<meta property="og:site_name" content="Bottleneck Calculator"><meta property="og:locale" content="en_US"><meta name="twitter:title" content="NVIDIA Reflex vs AMD Anti-Lag: Does It Reduce Input Lag?"><meta name="twitter:description" content="How NVIDIA Reflex, AMD Anti-Lag 2 and Intel XeLL cut input lag, why they help most when GPU-bound, and which in-game and driver settings to use."><meta name="author" content="Bottleneck Calculator"><meta property="article:published_time" content="2026-10-21"><meta property="article:modified_time" content="2026-10-21"><link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"NVIDIA Reflex vs AMD Anti-Lag: Does It Reduce Input Lag?","description":"How NVIDIA Reflex, AMD Anti-Lag 2 and Intel XeLL cut input lag, why they help most when GPU-bound, and which in-game and driver settings to use.","mainEntityOfPage":{"@type":"WebPage","@id":"https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html"},"url":"https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html","inLanguage":"en","image":["https://bottleneckcalculator.cc/images/blog/reflex-anti-lag-render-queue-latency.webp"],"datePublished":"2026-10-21","dateModified":"2026-10-21","author":{"@type":"Person","@id":"https://bottleneckcalculator.cc/muhammad-hanfi.html#person","name":"Muhammad Hanfi","url":"https://bottleneckcalculator.cc/muhammad-hanfi.html"},"publisher":{"@type":"Organization","@id":"https://bottleneckcalculator.cc/#org","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","logo":{"@type":"ImageObject","url":"https://bottleneckcalculator.cc/icon-512.png","width":512,"height":512}}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bottleneckcalculator.cc/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://bottleneckcalculator.cc/blog.html"},{"@type":"ListItem","position":3,"name":"NVIDIA Reflex vs AMD Anti-Lag: Does It Reduce Input Lag?","item":"https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does NVIDIA Reflex increase FPS?","acceptedAnswer":{"@type":"Answer","text":"No. Reflex reduces input lag, not frame rate. In some GPU-bound games average FPS can dip slightly because the CPU waits before starting each frame, while the game feels more responsive."}},{"@type":"Question","name":"Should I use Reflex On or On + Boost?","acceptedAnswer":{"@type":"Answer","text":"On gives most of the benefit. On + Boost keeps GPU clocks higher in CPU-heavy moments and can trim a little more delay, at the cost of slightly higher power use. It suits desktops more than laptops."}},{"@type":"Question","name":"Is AMD Anti-Lag 2 better than the driver Anti-Lag?","acceptedAnswer":{"@type":"Answer","text":"Yes, where a game supports it. Anti-Lag 2 is built into the game and places its delay just before your input is read, which AMD says gives a larger reduction than the driver-level version."}},{"@type":"Question","name":"Should I turn on Low Latency Mode Ultra in NVIDIA Control Panel?","acceptedAnswer":{"@type":"Answer","text":"Only for games without Reflex, mainly DirectX 9 and DirectX 11 titles. In-game Reflex overrides the driver setting, and DirectX 12 and Vulkan games manage the queue themselves."}},{"@type":"Question","name":"Do Reflex and Anti-Lag help if my CPU is the bottleneck?","acceptedAnswer":{"@type":"Answer","text":"Usually only a little. When the CPU is the limit, the render queue is already close to empty, so there is less waiting time to remove. The biggest gains come when the GPU is near full usage."}}]}</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="/" class="">Calculator</a><a href="/#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="/">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="blog.html">Guides</a> / <span aria-current="page">Reflex vs Anti-Lag</span></nav><span class="eyebrow">GPU Settings</span>
+<h1>NVIDIA Reflex vs AMD Anti-Lag: Do They Reduce Input Lag?</h1>
+<p class="byline">By <a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a>, founder and editor. Published 2026-10-21.</p>
+
+<p class="lead">NVIDIA Reflex and AMD Anti-Lag promise the same thing: less delay between moving your mouse and seeing the result on screen. They do not add frames per second, and in some situations they barely do anything. Whether they help depends on one question this site keeps coming back to: is your graphics card or your processor the limit? This guide explains how both features work, when they make a real difference, and which settings to use.</p>
+
+<figure class="article-figure"><img src="images/blog/reflex-anti-lag-render-queue-latency.webp" alt="Timeline diagram at 60 FPS comparing a GPU-bound game with a full render queue, where a frame waits about two frames before rendering for roughly 58 ms of delay, against the same game with Reflex or Anti-Lag on, where the queue stays empty and delay is roughly 25 ms" width="1400" height="788" decoding="async" fetchpriority="high"/><figcaption>An illustrative GPU-bound example: when frames wait in the render queue, input delay grows even though FPS stays the same.</figcaption></figure>
+
+<section class="prose">
+
+<h2>Input Lag Is Not the Same as Low FPS</h2>
+<p>Frame rate tells you how many new images reach the screen each second. Input lag, which NVIDIA calls system latency, is how long it takes for one click or mouse movement to show up in one of those images. The two are related, because a higher frame rate shortens each step of the pipeline, but they are not the same number.</p>
+<p>A game can run at a steady 90 FPS and still feel heavy to aim with. That usually means something in the chain is holding frames back before they are drawn. Reflex and Anti-Lag target that hidden waiting time. If your problem is choppy motion or a low frame rate, these features will not fix it. If your problem is a game that feels slow to respond, they are worth a look. And if the lag only happens online, it may be your connection instead, so start with <a href="blog-lag-vs-low-fps-internet-or-pc.html">telling network lag apart from a slow PC</a>.</p>
+
+<h2>Where the Delay Comes From: the Render Queue</h2>
+<p>Every frame passes through two main stages. First the CPU reads your input, runs the game logic and prepares drawing commands. Then the GPU turns those commands into an image. To keep the graphics card busy, the CPU is normally allowed to work ahead and line up finished commands in a render queue.</p>
+<p>That queue is harmless when the CPU is the slower part, because the GPU picks up each frame as soon as it arrives. It becomes a problem when the GPU is the slower part. The CPU keeps preparing frames faster than the GPU can draw them, so frames pile up. A frame built from your latest mouse movement then has to wait behind one or two older frames before it is rendered. At 60 FPS, each waiting frame adds about 16.7 ms.</p>
+<p>The chart above shows this with simple example numbers. The frame rate is identical in both cases. The only difference is whether frames sit in the queue, and that alone can more than double the delay in a GPU-bound scene.</p>
+
+<h2>What NVIDIA Reflex Does</h2>
+<p>Reflex is built into the game by the developer. NVIDIA describes it as reducing latency "through precise synchronization of rendering across GPU and CPU." In practice, the game delays the start of each CPU frame so it finishes just as the GPU is ready for it. Your input is read later, the queue stays close to empty, and the frame you see is based on more recent input.</p>
+<p>A few details worth knowing:</p>
+<ul>
+<li><strong>Supported cards.</strong> NVIDIA's latency guide says Reflex Low Latency works on GeForce GPUs going back to the GTX 900 series.</li>
+<li><strong>On and On + Boost.</strong> Most games offer both. Boost keeps GPU clocks higher in CPU-heavy moments, which can trim a little more delay at the cost of some extra power draw.</li>
+<li><strong>Frame generation.</strong> When you turn on DLSS Frame Generation, games turn Reflex on automatically to offset the delay that generated frames add.</li>
+<li><strong>Reflex 2.</strong> NVIDIA's newer version adds Frame Warp, which shifts the finished frame using your very latest mouse input just before it is displayed. It arrives game by game, so check whether your game lists it.</li>
+</ul>
+
+<h2>What AMD Anti-Lag and Anti-Lag 2 Do</h2>
+<p>AMD has two versions. The original Radeon Anti-Lag is a toggle in AMD Software that works at the driver level. AMD describes it as introducing "a carefully calculated delay" into the driver's handling of the game's graphics commands, so the CPU does not run as far ahead.</p>
+<p>Anti-Lag 2 works like Reflex. The developer builds it into the game, and the delay is placed at the best point inside the game's own logic, just before your controls are read. AMD says this gives a significantly greater reduction than the driver version. It supports Radeon RX 5000 series cards and newer and needs a recent Adrenalin driver. If a game offers Anti-Lag 2 in its own settings, use that rather than the driver toggle.</p>
+
+<h2>NVIDIA Low Latency Mode and Intel XeLL</h2>
+<p>NVIDIA Control Panel has its own setting called Low Latency Mode, with Off, On and Ultra. On limits the queue to one frame, and Ultra submits frames just in time from the driver. It is mainly useful for older DirectX 9 and DirectX 11 games that do not support Reflex. In DirectX 12 and Vulkan games the game manages the queue itself, so the driver setting usually has little or no effect. If both are enabled, NVIDIA's guide is clear that in-game Reflex overrides the driver setting, so there is no need to stack them.</p>
+<p>Intel Arc owners have Xe Low Latency, or XeLL, which ships as part of XeSS 2 in supported games. Intel says it reduces latency "from your keyboard and mouse to what happens on screen." Like Reflex and Anti-Lag 2, it appears as an in-game option when the developer has added it.</p>
+
+<h2>When These Features Help Most</h2>
+<p>The benefit follows the render queue. That makes it easy to predict:</p>
+<ul>
+<li><strong>GPU-bound, GPU usage near 95 to 100%:</strong> the biggest gains. This is common at 1440p and 4K, with ray tracing, or with high settings on a mid-range card.</li>
+<li><strong>CPU-bound, GPU usage well below full:</strong> small gains or none. The queue is already near empty because the GPU is waiting for the CPU. If that is your situation, read <a href="blog-how-to-fix-low-gpu-usage.html">why a GPU can sit well below full usage</a>.</li>
+<li><strong>Frame rate capped below what the GPU can reach:</strong> a cap already keeps the queue short, so Reflex adds less, though it rarely hurts.</li>
+<li><strong>Very high frame rates:</strong> each frame is already short, so the time saved in milliseconds is smaller, even though competitive players may still notice it.</li>
+</ul>
+<p>Not sure which side you are on? Watch GPU usage in an overlay during play, or follow our steps for <a href="blog-cpu-gpu-bottleneck-guide.html">spotting whether the CPU or GPU sets your frame rate</a>.</p>
+
+<h2>Do They Lower FPS?</h2>
+<p>Usually not by much. Because the CPU waits slightly before starting each frame, average FPS can dip a little in some GPU-bound games. Many players accept that because the game feels noticeably more responsive. Boost modes can raise power use and temperatures slightly, so on a laptop or a hot system you may prefer the plain On setting. As always, results vary by game.</p>
+
+<h2>Recommended Settings</h2>
+<ol>
+<li><strong>Use the in-game option first.</strong> If the game offers Reflex, Anti-Lag 2 or XeLL, set it to On. Try On + Boost on a desktop if you want every last millisecond.</li>
+<li><strong>Fall back to the driver for older games.</strong> On NVIDIA, set Low Latency Mode to On or Ultra for DirectX 9 and 11 games without Reflex. On Radeon, enable Anti-Lag in AMD Software for games without Anti-Lag 2.</li>
+<li><strong>Do not stack features.</strong> When the in-game option is on, the driver option adds nothing and can be left at its default.</li>
+<li><strong>Combine with variable refresh sensibly.</strong> With G-Sync or FreeSync, NVIDIA notes that V-Sync plus Reflex or Ultra Low Latency caps the frame rate just under your refresh rate automatically. See our advice on <a href="blog-vsync-gsync-freesync-fps-cap-guide.html">pairing a frame rate cap with G-Sync or FreeSync</a>.</li>
+<li><strong>Remember frame generation.</strong> Generated frames raise FPS but add some delay, which is why games pair them with Reflex or Anti-Lag. Our guide on <a href="blog-dlss-fsr-frame-generation-bottleneck.html">how frame generation interacts with a CPU limit</a> covers the trade-off.</li>
+</ol>
+
+<h2>How to Check the Difference</h2>
+<p>Some games with Reflex show a latency figure in their performance overlay, and NVIDIA's overlay can display PC latency in supported games. AMD's Anti-Lag 2 SDK also includes a latency monitor for developers. If no number is available, test a repeatable scene with the feature off and on, and pay attention to how quickly the camera follows a fast flick. A difference you cannot feel in a slow single-player game may still matter in a competitive shooter.</p>
+
+<h2>Conclusion</h2>
+<p>NVIDIA Reflex, AMD Anti-Lag 2 and Intel XeLL all reduce input lag by keeping the render queue empty, so your input reaches the screen sooner. They help most when the graphics card is the bottleneck and help little when the processor is. Turn on the in-game version where it exists, use the driver setting only for older games, and do not expect extra FPS. To see which part limits your system in the first place, try the free <a href="/">PC Bottleneck Calculator</a>.</p>
+
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Does NVIDIA Reflex increase FPS?</h3>
+  <p>No. Reflex reduces input lag, not frame rate. In some GPU-bound games average FPS can dip slightly because the CPU waits before starting each frame, while the game feels more responsive.</p>
+</div>
+<div class="faq-item">
+  <h3>Should I use Reflex On or On + Boost?</h3>
+  <p>On gives most of the benefit. On + Boost keeps GPU clocks higher in CPU-heavy moments and can trim a little more delay, at the cost of slightly higher power use. It suits desktops more than laptops.</p>
+</div>
+<div class="faq-item">
+  <h3>Is AMD Anti-Lag 2 better than the driver Anti-Lag?</h3>
+  <p>Yes, where a game supports it. Anti-Lag 2 is built into the game and places its delay just before your input is read, which AMD says gives a larger reduction than the driver-level version.</p>
+</div>
+<div class="faq-item">
+  <h3>Should I turn on Low Latency Mode Ultra in NVIDIA Control Panel?</h3>
+  <p>Only for games without Reflex, mainly DirectX 9 and DirectX 11 titles. In-game Reflex overrides the driver setting, and DirectX 12 and Vulkan games manage the queue themselves.</p>
+</div>
+<div class="faq-item">
+  <h3>Do Reflex and Anti-Lag help if my CPU is the bottleneck?</h3>
+  <p>Usually only a little. When the CPU is the limit, the render queue is already close to empty, so there is less waiting time to remove. The biggest gains come when the GPU is near full usage.</p>
+</div>
+</section>
+
+<section class="prose" id="sources">
+<h2>Sources</h2>
+<p>Official documentation and tools referenced in this guide:</p>
+<ul><li><a href="https://www.nvidia.com/en-us/geforce/guides/gfecnt/202010/system-latency-optimization-guide/" target="_blank" rel="noopener">NVIDIA: System latency optimization guide</a></li><li><a href="https://gpuopen.com/learn/integrating-amd-radeon-anti-lag-2-sdk-in-your-game/" target="_blank" rel="noopener">AMD GPUOpen: Radeon Anti-Lag 2 SDK</a></li><li><a href="https://www.intel.com/content/www/us/en/products/docs/arc-discrete-graphics/xess.html" target="_blank" rel="noopener">Intel: Arc gaming technologies and XeSS 2</a></li></ul>
+</section>
+
+<aside class="author-box"><div class="author-avatar" aria-hidden="true">MH</div><div><strong><a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a></strong><span class="role">Founder and editor, Bottleneck Calculator</span><p>Muhammad builds the calculator and writes and reviews these guides. Spotted an error? <a href="contact.html">Send a correction</a>.</p></div></aside>
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="/"><h3>Free PC Bottleneck Calculator</h3><p>Estimate CPU and GPU balance for your resolution and workload.</p></a>
+<a class="card" href="blog-vsync-gsync-freesync-fps-cap-guide.html"><h3>V-Sync vs G-Sync vs FreeSync</h3><p>Tearing, input lag and FPS caps.</p></a>
+<a class="card" href="blog-lag-vs-low-fps-internet-or-pc.html"><h3>Lag vs Low FPS</h3><p>Is it your internet or your PC?</p></a>
+<a class="card" href="blog-dlss-fsr-frame-generation-bottleneck.html"><h3>DLSS, FSR and Frame Generation</h3><p>How upscaling shifts the bottleneck.</p></a>
+<a class="card" href="blog-how-to-fix-low-gpu-usage.html"><h3>How to Fix Low GPU Usage</h3><p>When the CPU or a cap holds the GPU back.</p></a>
+<a class="card" href="blog-can-a-monitor-bottleneck-your-pc.html"><h3>Can a Monitor Bottleneck Your PC?</h3><p>Refresh rate vs FPS explained.</p></a>
+</div></section>
+</main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="/">Calculator</a><a href="blog.html">PC Guides</a><a href="/#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="muhammad-hanfi.html">Muhammad Hanfi</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year">2026</span> Bottleneck Calculator. All rights reserved. Built and edited by <a href="muhammad-hanfi.html">Muhammad Hanfi</a>.</div></footer><script src="app.js" defer></script></body></html>
