@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-does-ram-speed-affect-fps.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-windows-settings-for-gaming-performance.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-vsync-gsync-freesync-fps-cap-guide.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-ssd-vs-hdd-nvme-gaming-storage-bottleneck.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-how-much-vram-do-you-need-for-gaming.html</loc>
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/blog-stuttering-and-1-percent-lows-guide.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://bottleneckcalculator.cc/es.html</loc>
@@ -195,5 +195,9 @@
   <url>
     <loc>https://bottleneckcalculator.cc/blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html</loc>
     <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://bottleneckcalculator.cc/blog-shader-compilation-stutter-fix.html</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
 </urlset>
