@@ -1,0 +1,141 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hyper-Threading and SMT in Games: Should You Turn It Off?</title><meta name="description" content="What Hyper-Threading and SMT do, when turning them off changes FPS, how to check your thread count, and why most gamers should leave them on."><meta name="keywords" content="hyper-threading gaming, smt gaming, disable smt, cores vs threads">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-hyper-threading-smt-gaming.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="Hyper-Threading and SMT in Games: Should You Turn It Off?"><meta property="og:description" content="What Hyper-Threading and SMT do, when turning them off changes FPS, how to check your thread count, and why most gamers should leave them on."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/images/blog/hyper-threading-smt-cores-vs-threads.webp" property="og:image"/><meta content="1400" property="og:image:width"/><meta content="788" property="og:image:height"/><meta content="Diagram drawn to scale comparing hardware threads: Ryzen 7 9800X3D has 8 cores and 16 threads with SMT on or 8 threads with SMT off, Core i9-14900K has 8 P-cores with Hyper-Threading plus 16 E-cores for 32 threads, and Core Ultra 9 285K has 8 P-cores plus 16 E-cores without Hyper-Threading for 24 threads" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/images/blog/hyper-threading-smt-cores-vs-threads.webp" name="twitter:image"/><meta content="Diagram drawn to scale comparing hardware threads: Ryzen 7 9800X3D has 8 cores and 16 threads with SMT on or 8 threads with SMT off, Core i9-14900K has 8 P-cores with Hyper-Threading plus 16 E-cores for 32 threads, and Core Ultra 9 285K has 8 P-cores plus 16 E-cores without Hyper-Threading for 24 threads" name="twitter:image:alt"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-hyper-threading-smt-gaming.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509" crossorigin="anonymous"></script>
+<meta property="og:site_name" content="Bottleneck Calculator"><meta property="og:locale" content="en_US"><meta name="twitter:title" content="Hyper-Threading and SMT in Games: Should You Turn It Off?"><meta name="twitter:description" content="What Hyper-Threading and SMT do, when turning them off changes FPS, how to check your thread count, and why most gamers should leave them on."><meta name="author" content="Bottleneck Calculator"><meta property="article:published_time" content="2026-10-24"><meta property="article:modified_time" content="2026-10-24"><link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Hyper-Threading and SMT in Games: Should You Turn It Off?","description":"What Hyper-Threading and SMT do, when turning them off changes FPS, how to check your thread count, and why most gamers should leave them on.","mainEntityOfPage":{"@type":"WebPage","@id":"https://bottleneckcalculator.cc/blog-hyper-threading-smt-gaming.html"},"url":"https://bottleneckcalculator.cc/blog-hyper-threading-smt-gaming.html","inLanguage":"en","image":["https://bottleneckcalculator.cc/images/blog/hyper-threading-smt-cores-vs-threads.webp"],"datePublished":"2026-10-24","dateModified":"2026-10-24","author":{"@type":"Person","@id":"https://bottleneckcalculator.cc/muhammad-hanfi.html#person","name":"Muhammad Hanfi","url":"https://bottleneckcalculator.cc/muhammad-hanfi.html"},"publisher":{"@type":"Organization","@id":"https://bottleneckcalculator.cc/#org","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","logo":{"@type":"ImageObject","url":"https://bottleneckcalculator.cc/icon-512.png","width":512,"height":512}}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bottleneckcalculator.cc/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://bottleneckcalculator.cc/blog.html"},{"@type":"ListItem","position":3,"name":"Hyper-Threading and SMT in Games: Should You Turn It Off?","item":"https://bottleneckcalculator.cc/blog-hyper-threading-smt-gaming.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does disabling Hyper-Threading increase FPS?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, but usually only slightly. Gains tend to appear on CPUs with many cores in games that use only a few threads. On 4-core and 6-core processors, turning it off can lower FPS or make stutter worse, so test your own games before deciding."}},{"@type":"Question","name":"Is SMT the same as Hyper-Threading?","acceptedAnswer":{"@type":"Answer","text":"Yes, in practice. Simultaneous multithreading is the general name for running two threads on one core. Hyper-Threading is Intel's brand name for it, and AMD calls its version SMT."}},{"@type":"Question","name":"Why does my new Intel CPU have no Hyper-Threading option?","acceptedAnswer":{"@type":"Answer","text":"Intel removed Hyper-Threading from its Core Ultra 200S desktop processors. They run one thread per core, so there is no setting to change in the BIOS."}},{"@type":"Question","name":"Should I turn off SMT on a Ryzen X3D processor?","acceptedAnswer":{"@type":"Answer","text":"Most users should leave it on. The 8-core X3D chips are already strong in games, and SMT gives extra room for background apps. Only switch it off if a careful test in your own games shows a repeatable gain."}},{"@type":"Question","name":"Is it safe to turn Hyper-Threading or SMT off?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is a normal BIOS option and does not damage the CPU. You can switch it back on at any time, and resetting the BIOS to defaults also turns it back on."}}]}</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="/" class="">Calculator</a><a href="/#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="/">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="blog.html">Guides</a> / <span aria-current="page">Hyper-Threading and SMT</span></nav><span class="eyebrow">CPU settings</span>
+<h1>Hyper-Threading and SMT in Games: Should You Turn It Off?</h1>
+<p class="byline">By <a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a>, founder and editor. Published 2026-10-24.</p>
+
+<p class="lead">Few BIOS settings get argued about as much as Hyper-Threading on Intel and SMT on AMD. Some players swear that turning it off makes games smoother, while others say it makes no difference at all. Both groups can be right, because the effect depends on the processor, the game and what else is running. This guide explains what the feature does, when switching it off can help or hurt, how to test it safely on your own PC, and why most gamers are best served by leaving it on.</p>
+
+<figure class="article-figure"><img src="images/blog/hyper-threading-smt-cores-vs-threads.webp" alt="Diagram drawn to scale comparing hardware threads: Ryzen 7 9800X3D has 8 cores and 16 threads with SMT on or 8 threads with SMT off, Core i9-14900K has 8 P-cores with Hyper-Threading plus 16 E-cores for 32 threads, and Core Ultra 9 285K has 8 P-cores plus 16 E-cores without Hyper-Threading for 24 threads" width="1400" height="788" decoding="async" fetchpriority="high"/><figcaption>How cores turn into threads on four common desktop CPUs. A second thread shares its core rather than adding a new one.</figcaption></figure>
+
+<section class="prose">
+
+<h2>What Hyper-Threading and SMT Actually Do</h2>
+<p>Simultaneous multithreading, or SMT, lets one physical CPU core run two instruction streams at once. Intel calls its version Hyper-Threading. AMD simply calls it SMT. To Windows, each of those streams looks like a separate processor, which is why Task Manager can show 16 logical processors on an 8-core chip.</p>
+<p>The key point is that the two threads share the same core. They share its execution units, its caches and its connection to memory. SMT works because a single thread rarely keeps every part of a core busy. While one thread waits for data from memory, the other can use the idle units. The result is more total work done per core, but nowhere near double. A second thread is extra scheduling room, not a second full core.</p>
+<p>That sharing is also why SMT can occasionally hurt. When two busy threads land on the same core, each one runs a little slower than it would alone. If one of them is the main game thread, that small slowdown can show up as a lower frame rate or weaker 1% lows.</p>
+
+<h2>Which CPUs Still Have It</h2>
+<p>Thread counts are less uniform than they used to be, so it helps to know what your processor has before you change anything:</p>
+<ul>
+<li><strong>AMD Ryzen.</strong> Desktop Ryzen processors in current lines generally support SMT, giving two threads per core. A Ryzen 7 9800X3D, for example, has 8 cores and 16 threads.</li>
+<li><strong>Intel 12th to 14th Gen Core.</strong> These hybrid chips mix performance cores (P-cores) and efficient cores (E-cores). Only the P-cores have Hyper-Threading. A Core i9-14900K has 8 P-cores and 16 E-cores, for 32 threads.</li>
+<li><strong>Intel Core Ultra 200S desktop chips.</strong> Intel dropped Hyper-Threading from this generation, codenamed Arrow Lake. A Core Ultra 9 285K has the same 8 P-cores and 16 E-cores layout as the 14900K but only 24 threads, one per core.</li>
+</ul>
+<p>The chart above shows these four layouts side by side. If you own one of the Core Ultra 200S desktop chips, there is no Hyper-Threading setting to change, and the rest of this debate does not apply to you.</p>
+
+<h2>How to Check Your Cores and Threads</h2>
+<p>You do not need to open the BIOS to see whether SMT is active:</p>
+<ol>
+<li>Open Task Manager with Ctrl + Shift + Esc.</li>
+<li>Go to the Performance tab and select CPU.</li>
+<li>Look at the lines labeled <strong>Cores</strong> and <strong>Logical processors</strong> below the graph.</li>
+</ol>
+<p>If logical processors is double the core count, SMT or Hyper-Threading is on for every core. On an Intel hybrid chip, the logical count will be the number of P-cores times two, plus the E-cores. If both numbers match, SMT is either off or not supported. A free tool such as CPU-Z shows the same information on its CPU tab, along with the exact model name. Our walkthrough on <a href="blog-pc-usage-guide.html">watching per-core load in Task Manager</a> explains how to switch the CPU graph to show every logical processor.</p>
+
+<h2>When Turning It Off Can Help</h2>
+<p>There are real cases where disabling SMT gives a small gain, but they are narrower than forum posts suggest:</p>
+<ul>
+<li><strong>CPUs with many cores in lightly threaded games.</strong> A 12- or 16-core chip already has more cores than most games can use. Without SMT, every game thread gets a full core to itself, and in some titles that can nudge average FPS or 1% lows up slightly.</li>
+<li><strong>Older or poorly optimized games.</strong> Some older engines scale badly when they see a very high thread count and spread work in odd ways. Results vary by title, and a game patch can change the outcome.</li>
+<li><strong>Heat and power.</strong> Fewer active threads usually means slightly lower power draw and temperature under full load. On a CPU that runs close to its thermal limit, that can help clocks stay higher. If heat is your real issue, start with the checks in our guide to <a href="blog-thermal-throttling-vs-cpu-bottleneck.html">telling heat limits apart from a slow CPU</a> instead.</li>
+</ul>
+<p>In most modern games on a well-cooled PC, the difference either way tends to be small, often within normal run-to-run variation. Windows also generally tries to place work on separate physical cores before doubling up threads on one core, which already avoids much of the sharing penalty.</p>
+
+<h2>When Turning It Off Hurts</h2>
+<p>The cases where switching SMT off costs performance are more common for the average gaming PC:</p>
+<ul>
+<li><strong>CPUs with 6 cores or fewer.</strong> On a 4-core or 6-core processor, a modern game, its anti-cheat, Discord, a browser and Windows background tasks can easily need more than one thread per core. Without SMT, those jobs compete for the same few cores, and stutter often gets worse. Many players with these chips are already close to <a href="blog-how-to-fix-100-percent-cpu-usage.html">CPU usage pinned at 100% in games</a>, and removing threads makes that worse.</li>
+<li><strong>Streaming and recording.</strong> Encoding video on the CPU, running OBS scenes and a chat overlay all add threads. If you stream with software encoding, SMT usually helps. See our notes on <a href="blog-streaming-while-gaming-bottleneck-guide.html">fixing encoding lag while you stream</a> for the other settings that matter there.</li>
+<li><strong>Productivity work.</strong> Rendering, compiling code and video exports scale with thread count. If the same PC does both, disabling SMT trades a possible small gaming gain for a clear loss in these tasks.</li>
+<li><strong>Shader compile screens.</strong> Precompile steps and loading screens often use every available thread, so they can take longer with SMT off.</li>
+</ul>
+
+<h2>How to Test SMT on Your Own PC</h2>
+<p>Because results depend so much on the exact game and CPU, the only reliable answer is a short test of your own:</p>
+<ol>
+<li><strong>Pick two or three games you play often</strong>, ideally ones where you suspect a CPU limit. Lower the resolution or use upscaling so the GPU is not the main limit.</li>
+<li><strong>Choose a repeatable scene</strong>, such as a built-in benchmark or the same route through a busy area for 60 seconds.</li>
+<li><strong>Record average FPS and 1% lows</strong> with an overlay or capture tool. Run each test three times and use the middle result.</li>
+<li><strong>Reboot into the BIOS and switch the setting.</strong> On AMD boards it is usually called SMT Control or SMT Mode, often under an advanced CPU configuration menu. On Intel boards look for Hyper-Threading, sometimes under CPU or processor configuration. Menu names vary by motherboard maker, so check the manual if you cannot find it.</li>
+<li><strong>Repeat the same runs</strong> with the same background apps open, then compare.</li>
+</ol>
+<p>If the gap is smaller than the difference between your own repeated runs, treat it as no change and turn SMT back on. Pay more attention to 1% lows than to average FPS, since smoothness is what you feel. Our guide on <a href="blog-stuttering-and-1-percent-lows-guide.html">reading frame-time spikes and 1% lows</a> covers how to judge those numbers.</p>
+
+<h2>Better Things to Try First</h2>
+<p>Disabling SMT is a niche tweak with a small upside. If your games feel CPU-limited, these steps usually matter more:</p>
+<ul>
+<li>Close background apps that use CPU time, especially browsers with many tabs and launcher overlays.</li>
+<li>Make sure your RAM runs at its rated speed with XMP or EXPO enabled.</li>
+<li>Keep the chipset driver, BIOS and Windows up to date, since CPU scheduling fixes often arrive through these.</li>
+<li>Use a frame rate cap a little below your monitor refresh rate to steady frame pacing.</li>
+<li>Check that the CPU stays below its thermal limit during long sessions.</li>
+</ul>
+<p>If none of that helps, the processor may simply be the limiting part. Our guide to <a href="blog-cpu-gpu-bottleneck-guide.html">spotting whether the CPU or GPU limits your frame rate</a> shows how to confirm that before you spend money.</p>
+
+<h2>Conclusion</h2>
+<p>Hyper-Threading and SMT let each core juggle two threads, which adds useful capacity for multitasking, streaming and heavy workloads. Turning them off can give a small gain on high-core-count CPUs in some games, but it can also hurt on 4-core and 6-core chips and whenever you run other apps alongside the game. For most players the right choice is to leave the setting on and only switch it off after a careful test shows a repeatable improvement. To see whether your CPU and GPU are well matched in the first place, try the free <a href="/">PC Bottleneck Calculator</a>.</p>
+
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Does disabling Hyper-Threading increase FPS?</h3>
+  <p>Sometimes, but usually only slightly. Gains tend to appear on CPUs with many cores in games that use only a few threads. On 4-core and 6-core processors, turning it off can lower FPS or make stutter worse, so test your own games before deciding.</p>
+</div>
+<div class="faq-item">
+  <h3>Is SMT the same as Hyper-Threading?</h3>
+  <p>Yes, in practice. Simultaneous multithreading is the general name for running two threads on one core. Hyper-Threading is Intel's brand name for it, and AMD calls its version SMT.</p>
+</div>
+<div class="faq-item">
+  <h3>Why does my new Intel CPU have no Hyper-Threading option?</h3>
+  <p>Intel removed Hyper-Threading from its Core Ultra 200S desktop processors. They run one thread per core, so there is no setting to change in the BIOS.</p>
+</div>
+<div class="faq-item">
+  <h3>Should I turn off SMT on a Ryzen X3D processor?</h3>
+  <p>Most users should leave it on. The 8-core X3D chips are already strong in games, and SMT gives extra room for background apps. Only switch it off if a careful test in your own games shows a repeatable gain.</p>
+</div>
+<div class="faq-item">
+  <h3>Is it safe to turn Hyper-Threading or SMT off?</h3>
+  <p>Yes. It is a normal BIOS option and does not damage the CPU. You can switch it back on at any time, and resetting the BIOS to defaults also turns it back on.</p>
+</div>
+</section>
+
+<section class="prose" id="sources">
+<h2>Sources</h2>
+<p>Official specifications and tools referenced in this guide:</p>
+<ul><li><a href="https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html" target="_blank" rel="noopener">AMD: Ryzen 7 9800X3D specifications</a></li><li><a href="https://www.cpuid.com/softwares/cpu-z.html" target="_blank" rel="noopener">CPUID: CPU-Z</a></li></ul>
+</section>
+
+<aside class="author-box"><div class="author-avatar" aria-hidden="true">MH</div><div><strong><a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a></strong><span class="role">Founder and editor, Bottleneck Calculator</span><p>Muhammad builds the calculator and writes and reviews these guides. Spotted an error? <a href="contact.html">Send a correction</a>.</p></div></aside>
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="/"><h3>Free PC Bottleneck Calculator</h3><p>Estimate CPU and GPU balance for your resolution and workload.</p></a>
+<a class="card" href="blog-best-cpu-for-gaming-guide.html"><h3>How to Choose a Gaming CPU</h3><p>Cores, cache, clock speed and GPU pairing.</p></a>
+<a class="card" href="blog-how-to-fix-100-percent-cpu-usage.html"><h3>How to Fix 100% CPU Usage</h3><p>Lower CPU load in games without upgrading.</p></a>
+<a class="card" href="blog-cpu-gpu-bottleneck-guide.html"><h3>CPU vs GPU Bottleneck</h3><p>Find out which part limits your frame rate.</p></a>
+<a class="card" href="blog-streaming-while-gaming-bottleneck-guide.html"><h3>Gaming and Streaming Together</h3><p>Fix OBS encoding lag and dropped frames.</p></a>
+<a class="card" href="blog-thermal-throttling-vs-cpu-bottleneck.html"><h3>Thermal Throttling vs CPU Bottleneck</h3><p>Safe temperatures and heat-related slowdowns.</p></a>
+</div></section>
+</main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="/">Calculator</a><a href="blog.html">PC Guides</a><a href="/#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="muhammad-hanfi.html">Muhammad Hanfi</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year">2026</span> Bottleneck Calculator. All rights reserved. Built and edited by <a href="muhammad-hanfi.html">Muhammad Hanfi</a>.</div></footer><script src="app.js" defer></script></body></html>
