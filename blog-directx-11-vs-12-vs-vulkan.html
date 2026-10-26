@@ -1,0 +1,139 @@
+<!doctype html><html lang="en" data-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4WF04PCL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z4WF04PCL5');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?</title><meta name="description" content="How DirectX 11, DirectX 12 and Vulkan differ, why the newer APIs can lift FPS on CPU-limited PCs, when DX11 is smoother, and how to test each one."><meta name="keywords" content="directx 11 vs directx 12, vulkan vs directx 12, graphics api fps">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://bottleneckcalculator.cc/blog-directx-11-vs-12-vs-vulkan.html"><meta name="theme-color" content="#f6f8fb">
+<meta property="og:title" content="DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?"><meta property="og:description" content="How DirectX 11, DirectX 12 and Vulkan differ, why the newer APIs can lift FPS on CPU-limited PCs, when DX11 is smoother, and how to test each one."><meta property="og:type" content="article"><meta content="https://bottleneckcalculator.cc/images/blog/directx-11-vs-12-vs-vulkan.webp" property="og:image"/><meta content="1400" property="og:image:width"/><meta content="788" property="og:image:height"/><meta content="Diagram comparing graphics APIs: a to-scale timeline shows DirectX 11 in October 2009, DirectX 12 in July 2015 and Vulkan 1.0 in February 2016, and three panels show DirectX 11 feeding the GPU mostly from one thread through a heavy driver while DirectX 12 and Vulkan let several CPU threads record work through a thin driver" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://bottleneckcalculator.cc/images/blog/directx-11-vs-12-vs-vulkan.webp" name="twitter:image"/><meta content="Diagram comparing graphics APIs: a to-scale timeline shows DirectX 11 in October 2009, DirectX 12 in July 2015 and Vulkan 1.0 in February 2016, and three panels show DirectX 11 feeding the GPU mostly from one thread through a heavy driver while DirectX 12 and Vulkan let several CPU threads record work through a thin driver" name="twitter:image:alt"/><meta property="og:url" content="https://bottleneckcalculator.cc/blog-directx-11-vs-12-vs-vulkan.html">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2208846336558509" crossorigin="anonymous"></script>
+<meta property="og:site_name" content="Bottleneck Calculator"><meta property="og:locale" content="en_US"><meta name="twitter:title" content="DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?"><meta name="twitter:description" content="How DirectX 11, DirectX 12 and Vulkan differ, why the newer APIs can lift FPS on CPU-limited PCs, when DX11 is smoother, and how to test each one."><meta name="author" content="Bottleneck Calculator"><meta property="article:published_time" content="2026-10-26"><meta property="article:modified_time" content="2026-10-26"><link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?","description":"How DirectX 11, DirectX 12 and Vulkan differ, why the newer APIs can lift FPS on CPU-limited PCs, when DX11 is smoother, and how to test each one.","mainEntityOfPage":{"@type":"WebPage","@id":"https://bottleneckcalculator.cc/blog-directx-11-vs-12-vs-vulkan.html"},"url":"https://bottleneckcalculator.cc/blog-directx-11-vs-12-vs-vulkan.html","inLanguage":"en","image":["https://bottleneckcalculator.cc/images/blog/directx-11-vs-12-vs-vulkan.webp"],"datePublished":"2026-10-26","dateModified":"2026-10-26","author":{"@type":"Person","@id":"https://bottleneckcalculator.cc/muhammad-hanfi.html#person","name":"Muhammad Hanfi","url":"https://bottleneckcalculator.cc/muhammad-hanfi.html"},"publisher":{"@type":"Organization","@id":"https://bottleneckcalculator.cc/#org","name":"Bottleneck Calculator","url":"https://bottleneckcalculator.cc/","logo":{"@type":"ImageObject","url":"https://bottleneckcalculator.cc/icon-512.png","width":512,"height":512}}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bottleneckcalculator.cc/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://bottleneckcalculator.cc/blog.html"},{"@type":"ListItem","position":3,"name":"DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?","item":"https://bottleneckcalculator.cc/blog-directx-11-vs-12-vs-vulkan.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is DirectX 12 always faster than DirectX 11?","acceptedAnswer":{"@type":"Answer","text":"No. DirectX 12 can lower CPU overhead, so it often helps when the processor is the limit. When the graphics card is the limit, the two usually perform about the same, and in some games DirectX 11 has steadier frame times or fewer shader stutters. Test both in your own game."}},{"@type":"Question","name":"Is Vulkan better than DirectX 12?","acceptedAnswer":{"@type":"Answer","text":"Neither is better in general. Both are low-level APIs that let the game control more of the work, so results depend on how well each game uses them. Pick whichever gives better 1% lows and fewer crashes in your own test."}},{"@type":"Question","name":"Which API should I use with a weak CPU?","acceptedAnswer":{"@type":"Answer","text":"Try DirectX 12 or Vulkan first. They are designed to cut driver overhead and spread work across more threads, which tends to help most when the processor is holding back the frame rate. Keep the option that gives the higher and steadier result."}},{"@type":"Question","name":"Why does DirectX 12 stutter more in some games?","acceptedAnswer":{"@type":"Answer","text":"Usually because of shader compilation. With DirectX 12 and Vulkan the game, not the driver, decides when shaders are built. Games that skip a proper precompile step can hitch the first time new effects appear. A finished precompile step or a later patch often reduces it."}},{"@type":"Question","name":"How do I switch a game to DirectX 11, DirectX 12 or Vulkan?","acceptedAnswer":{"@type":"Answer","text":"Look in the game's graphics or display settings for an option called Graphics API, Renderer or Rendering Mode, then restart the game. Some games use a launcher setting or a launch option such as -dx11 or -dx12 instead. The exact name depends on the game."}}]}</script></head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a>
+<nav id="mainNav" class="nav-links"><a href="/" class="">Calculator</a><a href="/#method">Method</a><a href="blog.html" class="active">Blog</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
+<button class="icon-button mobile-menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><div class="lang-switch" aria-label="Language"><a class="active" href="/">EN</a><a href="es.html">ES</a><a href="fr.html">FR</a><a href="pt.html">PT</a><a href="zh.html">ZH</a></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div></header><main class="page-main container narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="blog.html">Guides</a> / <span aria-current="page">DirectX 11 vs 12 vs Vulkan</span></nav><span class="eyebrow">Game settings</span>
+<h1>DirectX 11 vs DirectX 12 vs Vulkan: Which Gives More FPS?</h1>
+<p class="byline">By <a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a>, founder and editor. Published 2026-10-26.</p>
+
+<p class="lead">Many PC games let you choose between DirectX 11, DirectX 12 and sometimes Vulkan, usually with no explanation of what the choice does. The option can matter, because these graphics APIs split work between the game, the driver and the CPU in different ways. On a PC held back by its processor, the right choice can raise FPS. On another PC, the same switch can add stutter. This guide explains how the three APIs differ, when each one tends to win, and how to test them on your own system in a few minutes.</p>
+
+<figure class="article-figure"><img src="images/blog/directx-11-vs-12-vs-vulkan.webp" alt="Diagram comparing graphics APIs: a to-scale timeline shows DirectX 11 in October 2009, DirectX 12 in July 2015 and Vulkan 1.0 in February 2016, and three panels show DirectX 11 feeding the GPU mostly from one thread through a heavy driver while DirectX 12 and Vulkan let several CPU threads record work through a thin driver" width="1400" height="788" decoding="async" fetchpriority="high"/><figcaption>DirectX 11 leans on the driver, while DirectX 12 and Vulkan hand more control, and more threads, to the game.</figcaption></figure>
+
+<section class="prose">
+
+<h2>What a Graphics API Actually Does</h2>
+<p>A graphics API is the language a game uses to tell your graphics card what to draw. Every frame, the game sends thousands of instructions: which objects to draw, which textures and shaders to use, and where everything sits on screen. Each of these requests is often called a draw call.</p>
+<p>The CPU prepares those instructions, and the graphics driver translates them into commands the GPU understands. How much of that work happens in the driver, and how many CPU threads can share it, is the main difference between the APIs. That is why the choice affects the CPU side of performance much more than the GPU side.</p>
+
+<h2>DirectX 11: The Driver Does the Heavy Lifting</h2>
+<p>DirectX 11 arrived in 2009. It is a higher-level API, which means the driver handles a lot of work behind the scenes, such as managing video memory and keeping track of resources. That makes games easier to build, and after many years of driver updates, DirectX 11 is mature and predictable.</p>
+<p>The downside is overhead. In most DirectX 11 games, much of the work of feeding the GPU runs on one main thread, and the driver adds its own processing on top. When a scene has many objects, that thread can become the limit even while other CPU cores sit partly idle. The result is a classic CPU bottleneck: GPU usage drops, and FPS stops rising no matter how low you set the graphics. If you are not sure whether that is happening on your PC, first <a href="blog-cpu-gpu-bottleneck-guide.html">confirm whether your processor or graphics card sets the frame rate</a>.</p>
+
+<h2>DirectX 12 and Vulkan: The Game Takes Control</h2>
+<p>DirectX 12 launched with Windows 10 in 2015, and Vulkan 1.0 followed in early 2016. Both are low-level APIs. Microsoft describes Direct3D 12 as giving a lower level of hardware abstraction than earlier versions, with much lower CPU overhead and a design that makes full use of multithreading. Vulkan, maintained by the Khronos Group, follows the same idea and runs on Windows, Linux and Android.</p>
+<p>In practice this means two things:</p>
+<ul>
+<li><strong>Less driver overhead.</strong> The driver does less guesswork, so each draw call costs less CPU time.</li>
+<li><strong>Work spread across threads.</strong> The game can prepare GPU commands on several CPU threads at once instead of pushing almost everything through one.</li>
+</ul>
+<p>The trade-off is responsibility. With DirectX 12 and Vulkan, the game itself must manage memory, synchronization and shader compilation, jobs the DirectX 11 driver used to handle. A well-built game uses that freedom to run faster. A rushed one can end up slower or less stable than its DirectX 11 version.</p>
+
+<h2>When DirectX 12 or Vulkan Usually Helps</h2>
+<p>The newer APIs tend to make the biggest difference in these situations:</p>
+<ul>
+<li><strong>CPU-limited systems.</strong> An older or lower-end processor paired with a faster graphics card often gains the most, because lower overhead frees up CPU time.</li>
+<li><strong>Busy scenes.</strong> Large cities, crowded multiplayer matches and strategy games with many units produce lots of draw calls, which is where DirectX 11 overhead hurts most.</li>
+<li><strong>Low resolutions and high refresh rates.</strong> At 1080p with competitive settings, the CPU is more likely to be the limit, so cutting its workload can lift FPS.</li>
+<li><strong>Games built around the new API.</strong> Titles designed for DirectX 12 or Vulkan from the start, rather than ported later, usually run best on that API.</li>
+<li><strong>Newer features.</strong> Ray tracing and some modern upscaling and frame generation options are typically only offered in the DirectX 12 or Vulkan mode of a game.</li>
+</ul>
+
+<h2>When DirectX 11 Can Still Be the Better Choice</h2>
+<p>Newer is not automatically faster. DirectX 11 can come out ahead in several cases:</p>
+<ul>
+<li><strong>GPU-limited systems.</strong> If your graphics card already runs near full load, reducing CPU overhead does little. The API makes only a small difference to how fast the GPU itself renders, so results are often close.</li>
+<li><strong>Shader stutter.</strong> DirectX 12 and Vulkan games compile shaders under the game's control. If a game does not prepare them in advance, you can see sharp hitches the first time new effects appear. This is <a href="blog-shader-compilation-stutter-fix.html">how shader compilation causes first-play hitches</a>, and the DirectX 11 mode of the same game sometimes shows fewer of them.</li>
+<li><strong>Weak DirectX 12 ports.</strong> Some games added DirectX 12 late in development or as an experimental option. Those versions can have lower FPS, worse 1% lows or more crashes.</li>
+</ul>
+<p>The low-latency settings in graphics drivers can also behave differently. Driver-level options mainly affect DirectX 11 titles, because DirectX 12 and Vulkan games manage their own frame queue. Our guide to <a href="blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html">driver low-latency settings and newer APIs</a> covers how that works.</p>
+
+<h2>DirectX 12 vs Vulkan on Windows</h2>
+<p>When a game offers both DirectX 12 and Vulkan, the two are usually closer to each other than either is to DirectX 11. Both give the game the same kind of low-level control, so the winner depends mostly on which version the developer tuned better. In many games the gap between them is small.</p>
+<p>Vulkan has a practical advantage outside Windows. On Linux and the Steam Deck, Proton translates many DirectX games to Vulkan, so a native Vulkan mode can avoid that translation step. On a Windows desktop, there is no rule that one is always faster, so treat them as two options worth testing.</p>
+
+<h2>How to Switch the Graphics API</h2>
+<p>Where the setting lives depends on the game:</p>
+<ol>
+<li><strong>In-game settings.</strong> Check the graphics, video or advanced display menu for an option named Graphics API, Renderer or Rendering Mode. Most games need a restart before the change applies.</li>
+<li><strong>The game's launcher.</strong> Some games show a small window before starting where you choose DirectX 11, DirectX 12 or Vulkan.</li>
+<li><strong>Launch options.</strong> In Steam, right-click the game in your Library, open Properties, and type a command in the Launch Options box on the General tab. Commands such as <code>-dx11</code>, <code>-dx12</code> or <code>-vulkan</code> work in some games, but each game decides which commands it accepts, so check the developer's support pages first.</li>
+</ol>
+<p>Fortnite is a good example of the variety: it offers DirectX 11, DirectX 12 and a lighter Performance mode, and Epic's help pages list launcher arguments for each one in case the in-game choice does not save.</p>
+
+<h2>How to Test Which API Is Faster on Your PC</h2>
+<p>Because results vary so much by game and hardware, a short test beats any general rule:</p>
+<ol>
+<li><strong>Keep everything else the same.</strong> Use the same resolution, graphics preset, upscaling setting and background apps for every run.</li>
+<li><strong>Pick a repeatable scene.</strong> A built-in benchmark is ideal. Otherwise, use the same 60-second route through a busy area.</li>
+<li><strong>Play the scene once before measuring.</strong> On DirectX 12 and Vulkan, the first run can include shader compilation. Measure the second and third runs so you compare the API, not a one-time cache build.</li>
+<li><strong>Record average FPS and 1% lows</strong> with an overlay or a capture tool, and watch GPU usage at the same time.</li>
+<li><strong>Repeat with the other API</strong> and compare the middle result of three runs each.</li>
+</ol>
+<p>Pay the most attention to 1% lows and how smooth the game feels, not only to the average. A mode with a slightly lower average but fewer spikes is often the better pick. Our notes on <a href="blog-stuttering-and-1-percent-lows-guide.html">comparing 1% lows between test runs</a> explain how to read those numbers.</p>
+<p>GPU usage is a useful clue. If it rises noticeably after switching to DirectX 12 or Vulkan, the new API is freeing up the CPU. If it stays low in every mode, the limit may be elsewhere, such as an FPS cap or background load. In that case, work through the common reasons for a <a href="blog-how-to-fix-low-gpu-usage.html">graphics card stuck well below full load</a>.</p>
+
+<h2>Conclusion</h2>
+<p>DirectX 11, DirectX 12 and Vulkan all draw the same game, but they share the work between game, driver and CPU differently. DirectX 12 and Vulkan can lower CPU overhead and spread work across more threads, which helps most on CPU-limited PCs and in busy scenes. DirectX 11 still has a place when a game's newer mode stutters or is poorly optimized. The best choice is the one that gives steadier frame times in your own test. To see whether your CPU and GPU are evenly matched in the first place, try the free <a href="/">PC Bottleneck Calculator</a>.</p>
+
+</section>
+
+<section class="prose">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+  <h3>Is DirectX 12 always faster than DirectX 11?</h3>
+  <p>No. DirectX 12 can lower CPU overhead, so it often helps when the processor is the limit. When the graphics card is the limit, the two usually perform about the same, and in some games DirectX 11 has steadier frame times or fewer shader stutters. Test both in your own game.</p>
+</div>
+<div class="faq-item">
+  <h3>Is Vulkan better than DirectX 12?</h3>
+  <p>Neither is better in general. Both are low-level APIs that let the game control more of the work, so results depend on how well each game uses them. Pick whichever gives better 1% lows and fewer crashes in your own test.</p>
+</div>
+<div class="faq-item">
+  <h3>Which API should I use with a weak CPU?</h3>
+  <p>Try DirectX 12 or Vulkan first. They are designed to cut driver overhead and spread work across more threads, which tends to help most when the processor is holding back the frame rate. Keep the option that gives the higher and steadier result.</p>
+</div>
+<div class="faq-item">
+  <h3>Why does DirectX 12 stutter more in some games?</h3>
+  <p>Usually because of shader compilation. With DirectX 12 and Vulkan the game, not the driver, decides when shaders are built. Games that skip a proper precompile step can hitch the first time new effects appear. A finished precompile step or a later patch often reduces it.</p>
+</div>
+<div class="faq-item">
+  <h3>How do I switch a game to DirectX 11, DirectX 12 or Vulkan?</h3>
+  <p>Look in the game's graphics or display settings for an option called Graphics API, Renderer or Rendering Mode, then restart the game. Some games use a launcher setting or a launch option such as -dx11 or -dx12 instead. The exact name depends on the game.</p>
+</div>
+</section>
+
+<section class="prose" id="sources">
+<h2>Sources</h2>
+<p>Official documentation referenced in this guide:</p>
+<ul><li><a href="https://learn.microsoft.com/en-us/windows/win32/direct3d12/what-is-directx-12-" target="_blank" rel="noopener">Microsoft Learn: What is Direct3D 12?</a></li><li><a href="https://www.vulkan.org/" target="_blank" rel="noopener">Khronos Group: Vulkan</a></li><li><a href="https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955" target="_blank" rel="noopener">Steam Support: Setting Game Launch Options</a></li></ul>
+</section>
+
+<aside class="author-box"><div class="author-avatar" aria-hidden="true">MH</div><div><strong><a href="muhammad-hanfi.html" rel="author">Muhammad Hanfi</a></strong><span class="role">Founder and editor, Bottleneck Calculator</span><p>Muhammad builds the calculator and writes and reviews these guides. Spotted an error? <a href="contact.html">Send a correction</a>.</p></div></aside>
+<section class="related-links"><h2>Continue learning</h2><div class="cards">
+<a class="card" href="/"><h3>Free PC Bottleneck Calculator</h3><p>Estimate CPU and GPU balance for your resolution and workload.</p></a>
+<a class="card" href="blog-shader-compilation-stutter-fix.html"><h3>Shader Compilation Stutter</h3><p>Why new effects hitch on first play and how to reduce it.</p></a>
+<a class="card" href="blog-cpu-gpu-bottleneck-guide.html"><h3>CPU vs GPU Bottleneck</h3><p>Find out which part limits your frame rate.</p></a>
+<a class="card" href="blog-how-to-fix-low-gpu-usage.html"><h3>How to Fix Low GPU Usage</h3><p>Why your graphics card is not fully loaded.</p></a>
+<a class="card" href="blog-stuttering-and-1-percent-lows-guide.html"><h3>What Causes PC Stuttering?</h3><p>Frame pacing, 1% lows and how to fix them.</p></a>
+<a class="card" href="blog-nvidia-reflex-vs-amd-anti-lag-input-lag.html"><h3>NVIDIA Reflex vs AMD Anti-Lag</h3><p>How low-latency modes cut input lag.</p></a>
+</div></section>
+</main><footer class="site-footer"><div class="container footer-grid">
+<div><a class="brand footer-brand" href="/"><span class="brand-mark">⌁</span><span>Bottleneck <b>Calculator</b></span></a><p>Practical PC bottleneck and system-health guidance for gamers, builders and everyday users.</p></div>
+<div><h3>Tool</h3><a href="/">Calculator</a><a href="blog.html">PC Guides</a><a href="/#method">Methodology</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="muhammad-hanfi.html">Muhammad Hanfi</a></div>
+<div><h3>Legal</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+</div><div class="container copyright">© <span id="year">2026</span> Bottleneck Calculator. All rights reserved. Built and edited by <a href="muhammad-hanfi.html">Muhammad Hanfi</a>.</div></footer><script src="app.js" defer></script></body></html>
