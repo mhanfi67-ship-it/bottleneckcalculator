@@ -35,7 +35,7 @@
 
 <h2>How Upscaling Creates a CPU Bottleneck</h2>
 <p>Because upscaling (DLSS 2 / FSR 2) lowers the internal resolution, it makes the game incredibly easy for the GPU to run. This sounds great, until you remember the <a href="blog-1080p-vs-1440p-vs-4k-bottleneck-guide.html">golden rule of resolution</a>: Lowering the resolution shifts the burden to the CPU.</p>
-<p>Imagine you are playing Cyberpunk 2077 at native 4K. Your GPU is struggling to hit 40 FPS. Your CPU is relaxing, easily preparing 40 frames per second. You are heavily GPU bottlenecked (which is normal and fine).</p>
+<p>Imagine you are playing <a href="blog-cyberpunk-2077-bottleneck-cpu-gpu-or-vram.html">Cyberpunk 2077</a> at native 4K. Your GPU is struggling to hit 40 FPS. Your CPU is relaxing, easily preparing 40 frames per second. You are heavily GPU bottlenecked (which is normal and fine).</p>
 <p>You turn on DLSS "Performance" mode. The game is now rendering internally at 1080p. Suddenly, your GPU can render 120 FPS. It turns to the CPU and demands 120 frames of game logic per second.</p>
 <p>If you have an older or mid-range processor, it might only be capable of preparing 80 frames per second in Cyberpunk. The CPU immediately hits 100% utilization. Your GPU usage drops from 100% down to 70%.</p>
 <p><strong>The result:</strong> You turned on DLSS hoping for 120 FPS, but you only got 80 FPS, and the game is now stuttering because you created a severe <a href="blog-cpu-gpu-bottleneck-guide.html">CPU bottleneck</a>. Your processor simply cannot keep up with the sped-up graphics card.</p>
